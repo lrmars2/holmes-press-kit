@@ -1,540 +1,704 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Holmes v. Northrop Realty et al. — Chronological Timeline</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Holmes v. Northrop Realty et al. — Systemic Failure Timeline & Press Kit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<style>
+  <!-- Fonts: Merriweather (title) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
 
-/* ------------------------------
-   GLOBAL PAGE STYLING
---------------------------------*/
-body {
-    font-family: Arial, sans-serif;
-    background-color: #0A1A2F; /* Navy */
-    margin: 0;
-    padding: 0;
-    color: #000;
-}
-
-h1, h2 {
-    color: white;
-    text-align: center;
-    margin-top: 20px;
-}
-
-/* ------------------------------
-   SIDEBAR
---------------------------------*/
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 260px;
-    height: 100%;
-    background-color: #0F223A;
-    padding: 20px;
-    overflow-y: auto;
-    border-right: 2px solid #D4AF37;
-}
-
-.sidebar h2 {
-    color: #D4AF37;
-    margin-bottom: 10px;
-}
-
-.sidebar a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    margin: 8px 0;
-    font-size: 14px;
-}
-
-.sidebar a:hover {
-    color: #D4AF37;
-}
-
-/* ------------------------------
-   MAIN CONTENT WRAPPER
---------------------------------*/
-.main-content {
-    margin-left: 300px;
-    padding: 40px;
-}
-
-/* ------------------------------
-   TIMELINE SPINE
---------------------------------*/
-.timeline-line {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background-color: #D4AF37; /* Gold */
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* ------------------------------
-   TIMELINE EVENT STRUCTURE
---------------------------------*/
-.timeline-event {
-    position: relative;
-    width: 100%;
-    margin: 60px 0;
-}
-
-/* BUBBLES */
-.event-bubble {
-    position: absolute;
-    width: 26px;
-    height: 26px;
-    background-color: white;
-    border: 3px solid #D4AF37; /* Gold border */
-    border-radius: 50%;
-    z-index: 10;
-}
-
-/* CRITICAL EVENT BUBBLES */
-.timeline-event.critical .event-bubble {
-    border: 3px solid #B30000; /* Red outline */
-}
-
-/* EVENT CARDS */
-.event-content {
-    background-color: white;
-    padding: 18px 22px;
-    width: 42%;
-    border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.25);
-}
-
-/* LEFT SIDE EVENTS */
-.timeline-event.left .event-bubble {
-    left: calc(50% - 240px);
-}
-
-.timeline-event.left .event-content {
-    margin-left: calc(50% - 240px);
-}
-
-/* RIGHT SIDE EVENTS */
-.timeline-event.right .event-bubble {
-    left: calc(50% + 20px);
-}
-
-.timeline-event.right .event-content {
-    margin-left: calc(50% + 20px);
-}
-
-/* DATE + TAGS */
-.event-date {
-    font-weight: bold;
-    color: #0A1A2F;
-}
-
-.event-tags {
-    font-size: 13px;
-    margin-bottom: 6px;
-    color: #444;
-}
-
-/* ------------------------------
-   MOBILE RESPONSIVE
---------------------------------*/
-@media (max-width: 768px) {
-
-    .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-        border-right: none;
-        border-bottom: 2px solid #D4AF37;
+  <style>
+    :root {
+      --bg-navy: #050b1a;
+      --card-bg: #ffffff;
+      --text-main: #111111;
+      --text-muted: #666666;
+      --gold: #d4af37;
+      --critical-red: #c62828;
+      --line-width: 4px;
+      --bubble-width: 42%;
+      --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.35);
+      --radius-card: 10px;
     }
 
-    .main-content {
-        margin-left: 0;
-        padding: 20px;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    .timeline-line {
-        left: 20px;
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #101632 0, #050b1a 45%, #02030a 100%);
+      color: #f5f5f5;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Header */
+
+    header.page-header {
+      padding: 3rem 1.5rem 3.5rem;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .page-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .page-title {
+      font-family: "Merriweather", "Times New Roman", serif;
+      font-weight: 900;
+      font-size: clamp(2.2rem, 3vw, 2.8rem);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 0.75rem;
+    }
+
+    .page-subtitle {
+      font-weight: 400;
+      font-size: clamp(1rem, 1.4vw, 1.15rem);
+      color: rgba(255, 255, 255, 0.85);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .page-meta {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Main layout */
+
+    main {
+      padding: 2.5rem 1.5rem 3.5rem;
+    }
+
+    .timeline-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* Timeline spine */
+
+    .timeline {
+      position: relative;
+      padding: 2.5rem 0 3rem;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: var(--line-width);
+      background: linear-gradient(
+        to bottom,
+        rgba(212, 175, 55, 0),
+        var(--gold),
+        var(--gold),
+        rgba(212, 175, 55, 0)
+      );
+      transform: translateX(-50%);
+    }
+
+    /* Timeline rows */
+
+    .timeline-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: flex-start;
+      margin: 2.5rem 0;
+      position: relative;
+    }
+
+    .timeline-row:first-of-type {
+      margin-top: 0;
+    }
+
+    .timeline-row:last-of-type {
+      margin-bottom: 0;
+    }
+
+    /* Connector dot at spine */
+
+    .timeline-row::before {
+      content: "";
+      position: absolute;
+      top: 1.4rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--bg-navy);
+      border: 3px solid var(--gold);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.25);
+      z-index: 2;
+    }
+
+    /* Bubbles */
+
+    .timeline-bubble {
+      max-width: var(--bubble-width);
+      background: var(--card-bg);
+      color: var(--text-main);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-soft);
+      padding: 1.25rem 1.4rem 1.3rem;
+      position: relative;
+      z-index: 3;
+    }
+
+    .timeline-row.left .timeline-bubble {
+      grid-column: 1;
+      justify-self: end;
+      margin-right: 2.5rem;
+      text-align: left;
+    }
+
+    .timeline-row.right .timeline-bubble {
+      grid-column: 2;
+      justify-self: start;
+      margin-left: 2.5rem;
+      text-align: left;
+    }
+
+    /* Critical events */
+
+    .timeline-bubble.critical {
+      border: 2px solid var(--critical-red);
+    }
+
+    .timeline-bubble.critical .event-label {
+      color: var(--critical-red);
+    }
+
+    /* Bubble arrow pointers */
+
+    .timeline-row.left .timeline-bubble::after,
+    .timeline-row.right .timeline-bubble::after {
+      content: "";
+      position: absolute;
+      top: 1.5rem;
+      width: 0;
+      height: 0;
+      border: 10px solid transparent;
+    }
+
+    .timeline-row.left .timeline-bubble::after {
+      right: -20px;
+      border-left-color: var(--card-bg);
+    }
+
+    .timeline-row.right .timeline-bubble::after {
+      left: -20px;
+      border-right-color: var(--card-bg);
+    }
+
+    /* Icon + date row */
+
+    .event-header {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .event-icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+    }
+
+    .event-icon svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .event-icon.normal svg path {
+      fill: #222222;
+    }
+
+    .event-icon.critical svg path {
+      fill: var(--critical-red);
+    }
+
+    .event-date {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .event-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #444444;
+    }
+
+    .event-title {
+      font-weight: 600;
+      font-size: 1rem;
+      margin: 0.35rem 0 0.4rem;
+      color: #111111;
+    }
+
+    .event-body {
+      font-size: 0.9rem;
+      color: #333333;
+    }
+
+    .event-body p + p {
+      margin-top: 0.4rem;
+    }
+
+    .event-meta {
+      margin-top: 0.6rem;
+      font-size: 0.8rem;
+      color: #555555;
+    }
+
+    .event-meta strong {
+      font-weight: 600;
+    }
+
+    /* Defendant status summary & footer */
+
+    .defendant-summary {
+      margin-top: 3rem;
+      background: rgba(5, 11, 26, 0.9);
+      border-radius: 12px;
+      padding: 1.75rem 1.5rem 1.9rem;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      color: #f5f5f5;
+    }
+
+    .defendant-summary h2 {
+      font-family: "Merriweather", "Times New Roman", serif;
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .defendant-summary p {
+      font-size: 0.9rem;
+      color: rgba(245, 245, 245, 0.9);
+    }
+
+    footer.site-footer {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      text-align: center;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    footer.site-footer a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer.site-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 900px) {
+      .timeline-row {
+        grid-template-columns: 1fr;
+        margin: 2rem 0;
+      }
+
+      .timeline::before {
+        left: 12px;
         transform: none;
+      }
+
+      .timeline-row::before {
+        left: 12px;
+        transform: none;
+      }
+
+      .timeline-bubble {
+        max-width: 100%;
+        margin: 0 0 0 2.5rem;
+      }
+
+      .timeline-row.left .timeline-bubble,
+      .timeline-row.right .timeline-bubble {
+        grid-column: 1;
+        justify-self: stretch;
+        text-align: left;
+      }
+
+      .timeline-row.left .timeline-bubble::after,
+      .timeline-row.right .timeline-bubble::after {
+        left: -20px;
+        right: auto;
+        border-right-color: var(--card-bg);
+        border-left-color: transparent;
+      }
     }
 
-    .timeline-event.left .event-bubble,
-    .timeline-event.right .event-bubble,
-    .timeline-event.left .event-content,
-    .timeline-event.right .event-content {
-        left: 0 !important;
-        margin-left: 40px !important;
-        width: calc(100% - 60px);
-    }
-}
+    @media (max-width: 600px) {
+      header.page-header {
+        padding: 2.5rem 1.25rem 3rem;
+      }
 
-</style>
+      main {
+        padding: 2rem 1.25rem 3rem;
+      }
+
+      .timeline-bubble {
+        padding: 1.1rem 1.1rem 1.2rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
-
-<div class="sidebar">
-    <h2>Key Documents</h2>
-    <a href="Holmes_Complaint.pdf" target="_blank">Civil Complaint (PDF)</a>
-    <a href="Exhibit_FF_Contradiction_Map.pdf" target="_blank">Exhibit FF — Contradiction Map</a>
-    <a href="MREC_Final_Order.pdf" target="_blank">MREC Final Order</a>
-    <a href="Bankruptcy_Consent_Order.pdf" target="_blank">Bankruptcy Consent Order</a>
-    <a href="Press_Release.pdf" target="_blank">Press Release</a>
-</div>
-
-<div class="main-content">
-<h1>Holmes v. Northrop Realty et al.</h1>
-<h2>Chronological Timeline — 33 Documented Events</h2>
-
-<div class="timeline-line"></div>
-
-<!-- TIMELINE START -->
-<!-- EVENT 1 — RIGHT (CRITICAL) -->
-<div class="timeline-event right critical">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">August 2022</div>
-        <div class="event-tags">ADMINISTRATIVE • CRITICAL EVENT</div>
-        Register Changes Locks on Bankruptcy-Protected Property — during an active federal bankruptcy stay, Daniel Register changes the locks and posts a false “bank/corporate owned” sign.
+  <header class="page-header">
+    <div class="page-header-inner">
+      <h1 class="page-title">Holmes v. Northrop Realty et al.</h1>
+      <p class="page-subtitle">Systemic Failure Timeline &amp; Press Kit</p>
+      <div class="page-meta">
+        <span>Maryland Civil Litigation &mdash; Pro Se Plaintiff</span>
+      </div>
     </div>
-</div>
+  </header>
 
-<!-- EVENT 2 — RIGHT (CRITICAL) -->
-<div class="timeline-event right critical">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">August 25, 2022</div>
-        <div class="event-tags">ADMINISTRATIVE • CRITICAL EVENT</div>
-        Foreclosure sale attempted despite active bankruptcy stay; McCalla Raymer seeks ratification in violation of the Bankruptcy Court Consent Order.
+  <main>
+    <div class="timeline-wrapper">
+      <section class="timeline">
+        <!-- BLOCK 2: Events 1–17 begin below -->
+        <!-- Event 1 (LEFT example) -->
+        <div class="timeline-row left">
+          <div class="timeline-bubble">
+            <div class="event-header">
+              <div class="event-icon normal">
+                <!-- Inline SVG icon (normal event) -->
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="event-date">[Date 1]</div>
+                <div class="event-label">Background</div>
+              </div>
+            </div>
+            <h3 class="event-title">[Event 1 title]</h3>
+            <div class="event-body">
+              <p>[Enhanced wording for Event 1 goes here.]</p>
+            </div>
+            <div class="event-meta">
+              <strong>Defendants:</strong> [Names] &nbsp;|&nbsp;
+              <strong>Status:</strong> [Status text]
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 2 (RIGHT example) -->
+        <div class="timeline-row right">
+          <div class="timeline-bubble">
+            <div class="event-header">
+              <div class="event-icon normal">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="event-date">[Date 2]</div>
+                <div class="event-label">Escalation</div>
+              </div>
+            </div>
+            <h3 class="event-title">[Event 2 title]</h3>
+            <div class="event-body">
+              <p>[Enhanced wording for Event 2 goes here.]</p>
+            </div>
+            <div class="event-meta">
+              <strong>Defendants:</strong> [Names] &nbsp;|&nbsp;
+              <strong>Status:</strong> [Status text]
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 3 (RIGHT, CRITICAL example) -->
+        <div class="timeline-row right">
+          <div class="timeline-bubble critical">
+            <div class="event-header">
+              <div class="event-icon critical">
+                <!-- Inline SVG icon (critical event) -->
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2 1 21h22Zm1 14h-2v-2h2Zm0-4h-2V9h2Z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="event-date">[Date 3]</div>
+                <div class="event-label">Critical Failure</div>
+              </div>
+            </div>
+            <h3 class="event-title">[Critical Event 3 title]</h3>
+            <div class="event-body">
+              <p>[Enhanced wording for Critical Event 3 goes here.]</p>
+            </div>
+            <div class="event-meta">
+              <strong>Defendants:</strong> [Names] &nbsp;|&nbsp;
+              <strong>Status:</strong> [Status text]
+            </div>
+          </div>
+        </div>
+
+        <!-- Repeat this pattern for Events 4–17 -->
+        <!--
+          For each event:
+          - Use .timeline-row.left or .timeline-row.right
+          - Use .timeline-bubble or .timeline-bubble critical
+          - Use .event-icon normal or .event-icon critical
+          - Keep the same SVGs; only change text and labels
+        -->
+
+        <!-- Event 4 -->
+        <div class="timeline-row left">
+          <div class="timeline-bubble">
+            <div class="event-header">
+              <div class="event-icon normal">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="event-date">[Date 4]</div>
+                <div class="event-label">[Label]</div>
+              </div>
+            </div>
+            <h3 class="event-title">[Event 4 title]</h3>
+            <div class="event-body">
+              <p>[Enhanced wording for Event 4 goes here.]</p>
+            </div>
+            <div class="event-meta">
+              <strong>Defendants:</strong> [Names] &nbsp;|&nbsp;
+              <strong>Status:</strong> [Status text]
+            </div>
+          </div>
+        </div>
+
+        <!-- ... Events 5–17 follow the same pattern ... -->
+
+        <!-- BLOCK 3: Events 18–33 + summary + footer begin below -->
+        <!-- ========================= -->
+        <!-- EVENTS 18–33 (STRUCTURE) -->
+        <!-- ========================= -->
+
+        <!-- Event 18 -->
+        <div class="timeline-row right">
+          <div class="timeline-bubble">
+            <div class="event-header">
+              <div class="event-icon normal">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="event-date">[Date 18]</div>
+                <div class="event-label">[Label]</div>
+              </div>
+            </div>
+            <h3 class="event-title">[Event 18 Title]</h3>
+            <div class="event-body">
+              <p>[Enhanced wording for Event 18 goes here.]</p>
+            </div>
+            <div class="event-meta">
+              <strong>Defendants:</strong> [Names] &nbsp;|&nbsp;
+              <strong>Status:</strong> [Status text]
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 19 -->
+        <div class="timeline-row left">
+          <div class="timeline-bubble">
+            <div class="event-header">
+              <div class="event-icon normal">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="event-date">[Date 19]</div>
+                <div class="event-label">[Label]</div>
+              </div>
+            </div>
+            <h3 class="event-title">[Event 19 Title]</h3>
+            <div class="event-body">
+              <p>[Enhanced wording for Event 19 goes here.]</p>
+            </div>
+            <div class="event-meta">
+              <strong>Defendants:</strong> [Names] &nbsp;|&nbsp;
+              <strong>Status:</strong> [Status text]
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 20 -->
+        <div class="timeline-row right">
+          <div class="timeline-bubble">
+            <div class="event-header">
+              <div class="event-icon normal">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="event-date">[Date 20]</div>
+                <div class="event-label">[Label]</div>
+              </div>
+            </div>
+            <h3 class="event-title">[Event 20 Title]</h3>
+            <div class="event-body">
+              <p>[Enhanced wording for Event 20 goes here.]</p>
+            </div>
+            <div class="event-meta">
+              <strong>Defendants:</strong> [Names] &nbsp;|&nbsp;
+              <strong>Status:</strong> [Status text]
+            </div>
+          </div>
+        </div>
+
+        <!-- ========================= -->
+        <!-- Continue Events 21–32     -->
+        <!-- Same structure as above   -->
+        <!-- ========================= -->
+
+        <!-- Event 33 (Critical Example) -->
+        <div class="timeline-row right">
+          <div class="timeline-bubble critical">
+            <div class="event-header">
+              <div class="event-icon critical">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2 1 21h22Zm1 14h-2v-2h2Zm0-4h-2V9h2Z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="event-date">[Date 33]</div>
+                <div class="event-label">Critical Failure</div>
+              </div>
+            </div>
+            <h3 class="event-title">[Critical Event 33 Title]</h3>
+            <div class="event-body">
+              <p>[Enhanced wording for Event 33 goes here.]</p>
+            </div>
+            <div class="event-meta">
+              <strong>Defendants:</strong> [Names] &nbsp;|&nbsp;
+              <strong>Status:</strong> [Status text]
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ========================= -->
+      <!-- DEFENDANT STATUS SUMMARY -->
+      <!-- ========================= -->
+
+      <section class="defendant-summary">
+        <h2>Defendant Status Summary</h2>
+
+        <div style="overflow-x:auto; margin-top:1rem;">
+          <table style="width:100%; border-collapse:collapse; font-size:0.9rem; color:#f5f5f5;">
+            <thead>
+              <tr style="background:rgba(212,175,55,0.15);">
+                <th style="padding:10px; border-bottom:1px solid rgba(255,255,255,0.15); text-align:left;">Defendant</th>
+                <th style="padding:10px; border-bottom:1px solid rgba(255,255,255,0.15); text-align:left;">Served</th>
+                <th style="padding:10px; border-bottom:1px solid rgba(255,255,255,0.15); text-align:left;">Counsel</th>
+                <th style="padding:10px; border-bottom:1px solid rgba(255,255,255,0.15); text-align:left;">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td style="padding:10px; border-bottom:1px solid rgba(255,255,255,0.08);">Daniel Register</td>
+                <td style="padding:10px; border-bottom:1px solid rgba(255,255,255,0.08);">Pending (Alt. Service)</td>
+                <td style="padding:10px; border-bottom:1px solid rgba(255,255,255,0.08);">Timothy Casey</td>
+                <td style="padding:10px; border-bottom:1px solid rgba(255,255,255,0.08);">Alt. Service Pending; Puerto Rico</td>
+              </tr>
+
+              <tr>
+                <td style="padding:10px; border-bottom:1px solid rgba(255,255,255,0.08);">Northrop Realty / CNT</td>
+                <td style="padding:10px; border-bottom:1px solid rgba(255,255,255,0.08);">Mar 26, 2026</td>
+                <td style="padding:10px; border-bottom:1px solid rgba(255,255,255,0.08);">Timothy Casey</td>
+                <td style="padding:10px; border-bottom:1px solid rgba(255,255,255,0.08);">MTD Filed; Discovery Deadline May 18</td>
+              </tr>
+
+              <tr>
+                <td style="padding:10px; border-bottom:1px solid rgba(255,255,255,0.08);">Long & Foster</td>
+                <td style="padding:10px; border-bottom:1px solid rgba(255,255,255,0.08);">Feb 2, 2026</td>
+                <td style="padding:10px; border-bottom:1px solid rgba(255,255,255,0.08);">Timothy Casey</td>
+                <td style="padding:10px; border-bottom:1px solid rgba(255,255,255,0.08);">Order of Default Entered</td>
+              </tr>
+
+              <tr>
+                <td style="padding:10px; border-bottom:1px solid rgba(255,255,255,0.08);">HomeServices of America</td>
+                <td style="padding:10px; border-bottom:1px solid rgba(255,255,255,0.08);">Mar 11, 2026</td>
+                <td style="padding:10px; border-bottom:1px solid rgba(255,255,255,0.08);">Timothy Casey</td>
+                <td style="padding:10px; border-bottom:1px solid rgba(255,255,255,0.08);">Default Pending</td>
+              </tr>
+
+              <tr>
+                <td style="padding:10px; border-bottom:1px solid rgba(255,255,255,0.08);">Maryland Association of REALTORS</td>
+                <td style="padding:10px; border-bottom:1px solid rgba(255,255,255,0.08);">Feb 2, 2026</td>
+                <td style="padding:10px; border-bottom:1px solid rgba(255,255,255,0.08);">Jerry Magrogan</td>
+                <td style="padding:10px; border-bottom:1px solid rgba(255,255,255,0.08);">Both MTDs Denied; Motion to Compel Pending</td>
+              </tr>
+
+              <tr>
+                <td style="padding:10px; border-bottom:1px solid rgba(255,255,255,0.08);">Maryland Real Estate Commission</td>
+                <td style="padding:10px; border-bottom:1px solid rgba(255,255,255,0.08);">Pending</td>
+                <td style="padding:10px; border-bottom:1px solid rgba(255,255,255,0.08);">AG’s Office</td>
+                <td style="padding:10px; border-bottom:1px solid rgba(255,255,255,0.08);">Active — Admin Appeal Open</td>
+              </tr>
+
+              <tr>
+                <td style="padding:10px;">McCalla Raymer LLP</td>
+                <td style="padding:10px;">Pending (Alt. Service)</td>
+                <td style="padding:10px;">TBD</td>
+                <td style="padding:10px;">Alt. Service Pending</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ========================= -->
+      <!-- FOOTER -->
+      <!-- ========================= -->
+
+      <footer class="site-footer">
+        <p>
+          Press &amp; litigation support: 
+          <a href="https://proselitcoach.com" target="_blank" rel="noopener noreferrer">
+            ProSeLitCoach.com
+          </a>
+        </p>
+      </footer>
+
     </div>
-</div>
-
-<!-- EVENT 3 — LEFT -->
-<div class="timeline-event left">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">July 9–10, 2023</div>
-        <div class="event-tags">ADMINISTRATIVE</div>
-        DR Enterprises LLC activates utilities for unauthorized occupants; BGE records addressed to “DR Enterprises LLC” become key evidence.
-    </div>
-</div>
-
-<!-- EVENT 4 — RIGHT (CRITICAL) -->
-<div class="timeline-event right critical">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">July 17, 2023</div>
-        <div class="event-tags">ADMINISTRATIVE • CRITICAL EVENT</div>
-        MREC complaint and $250,000 Guaranty Fund claim filed with 14 pages of evidence.
-    </div>
-</div>
-
-<!-- EVENT 5 — LEFT -->
-<div class="timeline-event left">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">Late 2023</div>
-        <div class="event-tags">ADMINISTRATIVE</div>
-        Register files 88‑page MREC response including sworn admission that he and Northrop were “assigned to manage the property by Shellpoint.”
-    </div>
-</div>
-
-<!-- EVENT 6 — RIGHT (CRITICAL) -->
-<div class="timeline-event right critical">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">December 21, 2023</div>
-        <div class="event-tags">ADMINISTRATIVE • CRITICAL EVENT</div>
-        MREC Final Order dismisses complaint and Guaranty Fund claim without a hearing; cc’d to D’Ambrosia.
-    </div>
-</div>
-
-<!-- EVENT 7 — LEFT -->
-<div class="timeline-event left">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">January 18, 2024</div>
-        <div class="event-tags">ADMINISTRATIVE</div>
-        Petition for Judicial Review filed — Admin Case No. 24‑C‑24‑000339.
-    </div>
-</div>
-
-<!-- EVENT 8 — RIGHT -->
-<div class="timeline-event right">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">May 9–14, 2024</div>
-        <div class="event-tags">ADMINISTRATIVE</div>
-        Timothy Casey enters appearances for Register in the administrative appeal.
-    </div>
-</div>
-
-<!-- EVENT 9 — RIGHT (CRITICAL) -->
-<div class="timeline-event right critical">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">June 18, 2024</div>
-        <div class="event-tags">ADMINISTRATIVE • CRITICAL EVENT</div>
-        Hearing before Judge Middleton; administrative case remains open and active.
-    </div>
-</div>
-
-<!-- EVENT 10 — LEFT -->
-<div class="timeline-event left">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">July 10, 2025</div>
-        <div class="event-tags">CIVIL</div>
-        Register relocates to Puerto Rico; Ashton property vacant; supervision issues arise.
-    </div>
-</div>
-
-<!-- EVENT 11 — RIGHT -->
-<div class="timeline-event right">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">Late 2025</div>
-        <div class="event-tags">CIVIL</div>
-        Civil complaint filed — Case No. C‑24‑CV‑25‑008195; seven defendants; $500M damages.
-    </div>
-</div>
-
-<!-- EVENT 12 — LEFT -->
-<div class="timeline-event left">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">February 2, 2026</div>
-        <div class="event-tags">CIVIL</div>
-        Long & Foster and MAR served; 30‑day deadlines begin.
-    </div>
-</div>
-
-<!-- EVENT 13 — RIGHT -->
-<div class="timeline-event right">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">February 10, 2026</div>
-        <div class="event-tags">CIVIL</div>
-        MAR files first Motion to Dismiss; Plaintiff opposes.
-    </div>
-</div>
-
-<!-- EVENT 14 — RIGHT (CRITICAL) -->
-<div class="timeline-event right critical">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">March 4, 2026</div>
-        <div class="event-tags">CIVIL • CRITICAL EVENT</div>
-        L&F answer deadline expires with no filing — basis for default.
-    </div>
-</div>
-
-<!-- EVENT 15 — LEFT -->
-<div class="timeline-event left">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">March 11, 2026</div>
-        <div class="event-tags">CIVIL</div>
-        HSoA served; 30‑day deadline begins.
-    </div>
-</div>
-
-<!-- EVENT 16 — RIGHT -->
-<div class="timeline-event right">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">March 16, 2026</div>
-        <div class="event-tags">CIVIL</div>
-        Scheduling Order issued.
-    </div>
-</div>
-
-<!-- EVENT 17 — RIGHT (CRITICAL) -->
-<div class="timeline-event right critical">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">March 20, 2026</div>
-        <div class="event-tags">CIVIL • CRITICAL EVENT</div>
-        MAR files second MTD; both ultimately denied.
-    </div>
-</div>
-
-<!-- EVENT 18 — LEFT -->
-<div class="timeline-event left">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">March 26, 2026</div>
-        <div class="event-tags">CIVIL</div>
-        Northrop/CNT served; Casey later falsely claims otherwise.
-    </div>
-</div>
-
-<!-- EVENT 19 — RIGHT (CRITICAL) -->
-<div class="timeline-event right critical">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">April 3, 2026</div>
-        <div class="event-tags">CIVIL • CRITICAL EVENT</div>
-        Casey files untimely L&F MTD; Plaintiff opposes within one hour.
-    </div>
-</div>
-
-<!-- EVENT 20 — LEFT -->
-<div class="timeline-event left">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">April 10, 2026</div>
-        <div class="event-tags">CIVIL</div>
-        HSoA answer deadline expires; basis for default.
-    </div>
-</div>
-
-<!-- EVENT 21 — RIGHT -->
-<div class="timeline-event right">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">April 17, 2026</div>
-        <div class="event-tags">CIVIL</div>
-        MAR discovery responses filed — seven contradictions documented.
-    </div>
-</div>
-
-<!-- EVENT 22 — LEFT -->
-<div class="timeline-event left">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">April 17, 2026</div>
-        <div class="event-tags">CIVIL</div>
-        Casey files Opposition to Alternate Service for Register.
-    </div>
-</div>
-
-<!-- EVENT 23 — RIGHT -->
-<div class="timeline-event right">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">April 18, 2026</div>
-        <div class="event-tags">CIVIL</div>
-        Northrop/CNT discovery served; Notice of Discovery filed.
-    </div>
-</div>
-
-<!-- EVENT 24 — RIGHT (CRITICAL) -->
-<div class="timeline-event right critical">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">April 23, 2026</div>
-        <div class="event-tags">CIVIL • CRITICAL EVENT</div>
-        Order of Default entered against Long & Foster.
-    </div>
-</div>
-
-<!-- EVENT 25 — LEFT -->
-<div class="timeline-event left">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">April 25–27, 2026</div>
-        <div class="event-tags">CIVIL</div>
-        Motion to Vacate L&F Default — affidavits filed by Register, D’Ambrosia, and Casey.
-    </div>
-</div>
-
-<!-- EVENT 26 — RIGHT -->
-<div class="timeline-event right">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">April 28, 2026</div>
-        <div class="event-tags">CIVIL</div>
-        RFA Set 2 served on Northrop and MAR.
-    </div>
-</div>
-
-<!-- EVENT 27 — LEFT -->
-<div class="timeline-event left">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">May 6, 2026</div>
-        <div class="event-tags">CIVIL</div>
-        Plaintiff files Reply to MAR’s Opposition to Motion to Compel.
-    </div>
-</div>
-
-<!-- EVENT 28 — RIGHT -->
-<div class="timeline-event right">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">May 7, 2026</div>
-        <div class="event-tags">CIVIL</div>
-        Notice of Lis Pendens filed in Baltimore City Land Records.
-    </div>
-</div>
-
-<!-- EVENT 29 — RIGHT (CRITICAL) -->
-<div class="timeline-event right critical">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">May 10, 2026</div>
-        <div class="event-tags">CIVIL • CRITICAL EVENT</div>
-        HSoA 60‑day answer deadline expires; default pending.
-    </div>
-</div>
-
-<!-- EVENT 30 — RIGHT (CRITICAL) -->
-<div class="timeline-event right critical">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">May 13, 2026</div>
-        <div class="event-tags">CIVIL • CRITICAL EVENT</div>
-        Register’s Maryland real estate license expires.
-    </div>
-</div>
-
-<!-- EVENT 31 — RIGHT (CRITICAL) -->
-<div class="timeline-event right critical">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">May 15, 2026</div>
-        <div class="event-tags">CIVIL • CRITICAL EVENT</div>
-        Chambers hearing before Judge Carrión — all pending motions reviewed.
-    </div>
-</div>
-
-<!-- EVENT 32 — LEFT -->
-<div class="timeline-event left">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">May 18, 2026</div>
-        <div class="event-tags">CIVIL</div>
-        Northrop/CNT discovery response deadline.
-    </div>
-</div>
-
-<!-- EVENT 33 — RIGHT -->
-<div class="timeline-event right">
-    <div class="event-bubble"></div>
-    <div class="event-content">
-        <div class="event-date">August 2026</div>
-        <div class="event-tags">CIVIL</div>
-        Amended Complaint deadline — punitive damages section and refined damages framework.
-    </div>
-</div>
-
-<!-- END OF EVENTS -->
-<!-- FOOTER -->
-<br><br><br>
-<footer style="text-align:center; color:white; padding:40px 0; font-size:14px;">
-    © 2026 Holmes v. Northrop Realty et al.  
-    <br>Interactive Timeline prepared for litigation and public accountability.
-    <br>Published via ProSeLitCoach.com
-</footer>
-
-</div> <!-- end main-content -->
-
+  </main>
 </body>
 </html>
