@@ -1,794 +1,939 @@
-<!-- EVENT 01 — CRITICAL — LEFT -->
-<div class="timeline-row left">
-  <div class="timeline-bubble critical">
-    <div class="event-header">
-      <div class="event-icon critical">
-        <svg viewBox="0 0 24 24"><path d="M12 2 1 21h22Zm1 14h-2v-2h2Zm0-4h-2V9h2Z"/></svg>
-      </div>
-      <div>
-        <div class="event-date">Feb–Aug 2022</div>
-        <div class="event-label">Administrative</div>
-      </div>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Holmes v. Northrop Realty — Interactive Timeline</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <h3 class="event-title">Register Listed Home for Sale & Changes Locks During Bankruptcy Stay</h3>
-    <span class="status-tag status-critical">Critical Event</span>
+  <style>
+    :root {
+      --navy: #0A1A2F;
+      --gold: #D4AF37;
+      --gold-light: #E8D28B;
+      --red: #B30000;
+      --white: #ffffff;
+      --black: #000000;
+    }
 
-    <div class="event-body">
-      <p>Daniel Register of Northrop Realty lists Plaintiff’s home for sale in February 2022. During an active federal bankruptcy stay under 11 U.S.C. §362, Register changes the locks on Plaintiff’s property at 2831 E. Northern Parkway without her knowledge or consent.</p>
-      <p>A sign falsely stating the property was “bank/corporate owned and not for rent” is posted in the window.</p>
+    body {
+      background: var(--navy);
+      color: var(--white);
+      font-family: Calibri, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+    }
+
+    header {
+      text-align: center;
+      padding: 32px 16px 16px 16px;
+      border-bottom: 2px solid var(--gold);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28pt;
+      letter-spacing: 1.5pt;
+      color: var(--white);
+    }
+
+    header p {
+      margin: 4px 0;
+      font-size: 11pt;
+      color: var(--white);
+    }
+
+    .timeline {
+      position: relative;
+      padding: 40px 16px 60px 16px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 100%;
+      background: var(--gold);
+      border-radius: 2px;
+      z-index: 1;
+    }
+
+    .timeline-row {
+      position: relative;
+      width: 100%;
+      margin: 40px 0;
+      display: flex;
+    }
+
+    .timeline-row.left {
+      justify-content: flex-start;
+    }
+
+    .timeline-row.right {
+      justify-content: flex-end;
+    }
+
+    .timeline-bubble {
+      width: 46%;
+      background: var(--white);
+      color: var(--black);
+      border-radius: 8px;
+      padding: 20px;
+      border: 3px solid var(--gold);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+      position: relative;
+      z-index: 2;
+    }
+
+    .timeline-bubble.critical {
+      border-color: var(--red);
+    }
+
+    .event-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .event-icon svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--black);
+    }
+
+    .event-date {
+      font-size: 11pt;
+      font-weight: bold;
+      color: var(--gold);
+    }
+
+    .timeline-bubble.critical .event-date {
+      color: var(--red);
+    }
+
+    .event-label {
+      font-size: 10pt;
+      color: var(--black);
+    }
+
+    .event-title {
+      margin: 8px 0;
+      font-size: 14pt;
+      color: var(--black);
+    }
+
+    .event-body p {
+      margin: 6px 0;
+      font-size: 11pt;
+      color: var(--black);
+    }
+
+    .status-tag {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 10pt;
+      margin-bottom: 10px;
+      color: var(--white);
+    }
+
+    .status-critical { background: var(--red); }
+    .status-filed { background: #0077cc; }
+    .status-served { background: #008f39; }
+    .status-order { background: #8a2be2; }
+    .status-hearing { background: #b8860b; }
+    .status-default { background: #444; }
+    .status-documented { background: #555; }
+
+    @media (max-width: 900px) {
+      .timeline {
+        padding: 24px 12px 40px 12px;
+      }
+      .timeline::before {
+        left: 20px;
+        transform: none;
+      }
+      .timeline-row {
+        justify-content: flex-start !important;
+      }
+      .timeline-bubble {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Holmes v. Northrop Realty et al.</h1>
+  <p>Interactive Investigative Timeline — 33 Documented Events</p>
+  <p>Civil Case No. C‑24‑CV‑25‑008195 · Admin Appeal No. 24‑C‑24‑000339</p>
+</header>
+
+<div class="timeline">
+  <!-- EVENT 01 — CRITICAL — LEFT -->
+  <div class="timeline-row left">
+    <div class="timeline-bubble critical">
+      <div class="event-header">
+        <div class="event-icon critical">
+          <svg viewBox="0 0 24 24"><path d="M12 2 1 21h22Zm1 14h-2v-2h2Zm0-4h-2V9h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">Feb–Aug 2022</div>
+          <div class="event-label">Administrative</div>
+        </div>
+      </div>
+
+      <h3 class="event-title">Register Listed Home for Sale & Changes Locks During Bankruptcy Stay</h3>
+      <span class="status-tag status-critical">Critical Event</span>
+
+      <div class="event-body">
+        <p>Daniel Register of Northrop Realty lists Plaintiff’s home for sale in February 2022. During an active federal bankruptcy stay under 11 U.S.C. §362, Register changes the locks on Plaintiff’s property at 2831 E. Northern Parkway without her knowledge or consent.</p>
+        <p>A sign falsely stating the property was “bank/corporate owned and not for rent” is posted in the window.</p>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- EVENT 02 — CRITICAL — RIGHT -->
-<div class="timeline-row right">
-  <div class="timeline-bubble critical">
-    <div class="event-header">
-      <div class="event-icon critical">
-        <svg viewBox="0 0 24 24"><path d="M12 2 1 21h22Zm1 14h-2v-2h2Zm0-4h-2V9h2Z"/></svg>
+  <!-- EVENT 02 — CRITICAL — RIGHT -->
+  <div class="timeline-row right">
+    <div class="timeline-bubble critical">
+      <div class="event-header">
+        <div class="event-icon critical">
+          <svg viewBox="0 0 24 24"><path d="M12 2 1 21h22Zm1 14h-2v-2h2Zm0-4h-2V9h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">Aug 25, 2022</div>
+          <div class="event-label">Administrative</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">Aug 25, 2022</div>
-        <div class="event-label">Administrative</div>
+
+      <h3 class="event-title">Foreclosure Sale Scheduled Despite Active Bankruptcy Stay</h3>
+      <span class="status-tag status-critical">Critical Event</span>
+
+      <div class="event-body">
+        <p>An attempted foreclosure sale is scheduled despite the active bankruptcy automatic stay. McCalla Raymer Leibert Pierce LLP, foreclosure counsel for Shellpoint Mortgage Servicing, proceeds to seek ratification in direct breach of the Bankruptcy Court’s Consent Order.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">Foreclosure Sale Scheduled Despite Active Bankruptcy Stay</h3>
-    <span class="status-tag status-critical">Critical Event</span>
-
-    <div class="event-body">
-      <p>An attempted foreclosure sale is scheduled despite the active bankruptcy automatic stay. McCalla Raymer Leibert Pierce LLP, foreclosure counsel for Shellpoint Mortgage Servicing, proceeds to seek ratification in direct breach of the Bankruptcy Court’s Consent Order.</p>
     </div>
   </div>
-</div>
 
-<!-- EVENT 03 — NORMAL — LEFT -->
-<div class="timeline-row left">
-  <div class="timeline-bubble">
-    <div class="event-header">
-      <div class="event-icon normal">
-        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+  <!-- EVENT 03 — LEFT -->
+  <div class="timeline-row left">
+    <div class="timeline-bubble">
+      <div class="event-header">
+        <div class="event-icon normal">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">Jul 9–10, 2023</div>
+          <div class="event-label">Administrative</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">Jul 9–10, 2023</div>
-        <div class="event-label">Administrative</div>
+
+      <h3 class="event-title">DR Enterprises LLC Activates Utilities for Unauthorized Occupants</h3>
+      <span class="status-tag status-documented">Documented</span>
+
+      <div class="event-body">
+        <p>Register’s personal LLC, DR Enterprises LLC, turns on electricity at Plaintiff’s property for unauthorized occupants. BGE utility records addressed to “DR Enterprises, LLC” become key evidence. SDAT records confirm the entity.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">DR Enterprises LLC Activates Utilities for Unauthorized Occupants</h3>
-    <span class="status-tag status-documented">Documented</span>
-
-    <div class="event-body">
-      <p>Register’s personal LLC, DR Enterprises LLC, turns on electricity at Plaintiff’s property for unauthorized occupants. BGE utility records addressed to “DR Enterprises, LLC” become key evidence. SDAT records confirm the entity.</p>
     </div>
   </div>
-</div>
 
-<!-- EVENT 04 — CRITICAL — RIGHT -->
-<div class="timeline-row right">
-  <div class="timeline-bubble critical">
-    <div class="event-header">
-      <div class="event-icon critical">
-        <svg viewBox="0 0 24 24"><path d="M12 2 1 21h22Zm1 14h-2v-2h2Zm0-4h-2V9h2Z"/></svg>
+  <!-- EVENT 04 — RIGHT -->
+  <div class="timeline-row right">
+    <div class="timeline-bubble critical">
+      <div class="event-header">
+        <div class="event-icon critical">
+          <svg viewBox="0 0 24 24"><path d="M12 2 1 21h22Zm1 14h-2v-2h2Zm0-4h-2V9h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">Jul 17, 2023</div>
+          <div class="event-label">Administrative</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">Jul 17, 2023</div>
-        <div class="event-label">Administrative</div>
+
+      <h3 class="event-title">MREC Complaint & $250,000 Guaranty Fund Claim Filed</h3>
+      <span class="status-tag status-filed">Filed</span>
+
+      <div class="event-body">
+        <p>Plaintiff files a formal complaint with MREC against Register and Northrop Realty, alleging unauthorized leasing and management during an active bankruptcy stay. A $250,000 Guaranty Fund claim is filed simultaneously.</p>
+        <p>Fourteen pages of evidence are submitted, including the Bankruptcy Court Consent Order, No Trespassing notice, and BGE/DR Enterprises records.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">MREC Complaint & $250,000 Guaranty Fund Claim Filed</h3>
-    <span class="status-tag status-filed">Filed</span>
-
-    <div class="event-body">
-      <p>Plaintiff files a formal complaint with MREC against Register and Northrop Realty, alleging unauthorized leasing and management during an active bankruptcy stay. A $250,000 Guaranty Fund claim is filed simultaneously.</p>
-      <p>Fourteen pages of evidence are submitted, including the Bankruptcy Court Consent Order, No Trespassing notice, and BGE/DR Enterprises records.</p>
     </div>
   </div>
-</div>
 
-<!-- EVENT 05 — NORMAL — LEFT -->
-<div class="timeline-row left">
-  <div class="timeline-bubble">
-    <div class="event-header">
-      <div class="event-icon normal">
-        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+  <!-- EVENT 05 — LEFT -->
+  <div class="timeline-row left">
+    <div class="timeline-bubble">
+      <div class="event-header">
+        <div class="event-icon normal">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">Late 2023</div>
+          <div class="event-label">Administrative</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">Late 2023</div>
-        <div class="event-label">Administrative</div>
+
+      <h3 class="event-title">Register’s 88‑Page MREC Response — Critical Admission</h3>
+      <span class="status-tag status-filed">Filed</span>
+
+      <div class="event-body">
+        <p>Register files an 88‑page response containing a pivotal sworn admission: he states that he and Northrop Realty were “assigned to manage the Property by Shellpoint Mortgage Servicing.”</p>
+        <p>He also submits Plaintiff’s personal lease agreement from a different address and rental payment history — documents he never explains how he obtained.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">Register’s 88‑Page MREC Response — Critical Admission</h3>
-    <span class="status-tag status-filed">Filed</span>
-
-    <div class="event-body">
-      <p>Register files an 88‑page response containing a pivotal sworn admission: he states that he and Northrop Realty were “assigned to manage the Property by Shellpoint Mortgage Servicing.”</p>
-      <p>He also submits Plaintiff’s personal lease agreement from a different address and rental payment history — documents he never explains how he obtained.</p>
     </div>
   </div>
-</div>
 
-<!-- EVENT 06 — CRITICAL — RIGHT -->
-<div class="timeline-row right">
-  <div class="timeline-bubble critical">
-    <div class="event-header">
-      <div class="event-icon critical">
-        <svg viewBox="0 0 24 24"><path d="M12 2 1 21h22Zm1 14h-2v-2h2Zm0-4h-2V9h2Z"/></svg>
+  <!-- EVENT 06 — RIGHT -->
+  <div class="timeline-row right">
+    <div class="timeline-bubble critical">
+      <div class="event-header">
+        <div class="event-icon critical">
+          <svg viewBox="0 0 24 24"><path d="M12 2 1 21h22Zm1 14h-2v-2h2Zm0-4h-2V9h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">Dec 21, 2023</div>
+          <div class="event-label">Administrative</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">Dec 21, 2023</div>
-        <div class="event-label">Administrative</div>
+
+      <h3 class="event-title">MREC Final Order — Complaint & Guaranty Fund Claim Dismissed</h3>
+      <span class="status-tag status-order">Order Issued</span>
+
+      <div class="event-body">
+        <p>MREC dismisses both the disciplinary complaint and the Guaranty Fund claim without a contested case hearing. The Commission conducts only a paper review and accepts Register’s account despite the active bankruptcy stay.</p>
+        <p>The dismissal letter is cc’d to Nick D’Ambrosia, Register’s supervising broker at Northrop Realty.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">MREC Final Order — Complaint & Guaranty Fund Claim Dismissed</h3>
-    <span class="status-tag status-order">Order Issued</span>
-
-    <div class="event-body">
-      <p>MREC dismisses both the disciplinary complaint and the Guaranty Fund claim without a contested case hearing. The Commission conducts only a paper review and accepts Register’s account despite the active bankruptcy stay.</p>
-      <p>The dismissal letter is cc’d to Nick D’Ambrosia, Register’s supervising broker at Northrop Realty.</p>
     </div>
   </div>
-</div>
 
-<!-- EVENT 07 — CRITICAL — LEFT -->
-<div class="timeline-row left">
-  <div class="timeline-bubble critical">
-    <div class="event-header">
-      <div class="event-icon critical">
-        <svg viewBox="0 0 24 24"><path d="M12 2 1 21h22Zm1 14h-2v-2h2Zm0-4h-2V9h2Z"/></svg>
+  <!-- EVENT 07 — LEFT -->
+  <div class="timeline-row left">
+    <div class="timeline-bubble critical">
+      <div class="event-header">
+        <div class="event-icon critical">
+          <svg viewBox="0 0 24 24"><path d="M12 2 1 21h22Zm1 14h-2v-2h2Zm0-4h-2V9h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">Jan 18, 2024</div>
+          <div class="event-label">Administrative</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">Jan 18, 2024</div>
-        <div class="event-label">Administrative</div>
+
+      <h3 class="event-title">Petition for Judicial Review Filed</h3>
+      <span class="status-tag status-filed">Filed</span>
+
+      <div class="event-body">
+        <p>Plaintiff files a Petition for Judicial Review challenging MREC’s dismissal. The case is assigned to Judge Middleton. The AG’s Office appears for the Commission; Register is listed as an Interested Person.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">Petition for Judicial Review Filed</h3>
-    <span class="status-tag status-filed">Filed</span>
-
-    <div class="event-body">
-      <p>Plaintiff files a Petition for Judicial Review challenging MREC’s dismissal. The case is assigned to Judge Middleton. The AG’s Office appears for the Commission; Register is listed as an Interested Person.</p>
     </div>
   </div>
-</div>
 
-<!-- EVENT 08 — NORMAL — RIGHT -->
-<div class="timeline-row right">
-  <div class="timeline-bubble">
-    <div class="event-header">
-      <div class="event-icon normal">
-        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+  <!-- EVENT 08 — RIGHT -->
+  <div class="timeline-row right">
+    <div class="timeline-bubble">
+      <div class="event-header">
+        <div class="event-icon normal">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">May 9–14, 2024</div>
+          <div class="event-label">Administrative</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">May 9–14, 2024</div>
-        <div class="event-label">Administrative</div>
+
+      <h3 class="event-title">Timothy Casey Enters Administrative Case as Register’s Counsel</h3>
+      <span class="status-tag status-filed">Appearance Entered</span>
+
+      <div class="event-body">
+        <p>Attorney Timothy Casey enters appearances on behalf of Register in the administrative judicial review proceeding, establishing their attorney‑client relationship nearly a year before the civil case is filed.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">Timothy Casey Enters Administrative Case as Register’s Counsel</h3>
-    <span class="status-tag status-filed">Appearance Entered</span>
-
-    <div class="event-body">
-      <p>Attorney Timothy Casey enters appearances on behalf of Register in the administrative judicial review proceeding, establishing their attorney‑client relationship nearly a year before the civil case is filed.</p>
     </div>
   </div>
-</div>
 
-<!-- EVENT 09 — CRITICAL — LEFT -->
-<div class="timeline-row left">
-  <div class="timeline-bubble critical">
-    <div class="event-header">
-      <div class="event-icon critical">
-        <svg viewBox="0 0 24 24"><path d="M12 2 1 21h22Zm1 14h-2v-2h2Zm0-4h-2V9h2Z"/></svg>
+  <!-- EVENT 09 — LEFT -->
+  <div class="timeline-row left">
+    <div class="timeline-bubble critical">
+      <div class="event-header">
+        <div class="event-icon critical">
+          <svg viewBox="0 0 24 24"><path d="M12 2 1 21h22Zm1 14h-2v-2h2Zm0-4h-2V9h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">Jun 18, 2024</div>
+          <div class="event-label">Administrative</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">Jun 18, 2024</div>
-        <div class="event-label">Administrative</div>
+
+      <h3 class="event-title">Hearing Before Judge Middleton — Admin Appeal</h3>
+      <span class="status-tag status-hearing">Hearing Held</span>
+
+      <div class="event-body">
+        <p>A hearing is held in administrative case 24‑C‑24‑000339. The case remains open and active. The AG’s Office represents MREC; Casey represents Register. No final ruling is issued as of May 2026.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">Hearing Before Judge Middleton — Admin Appeal</h3>
-    <span class="status-tag status-hearing">Hearing Held</span>
-
-    <div class="event-body">
-      <p>A hearing is held in administrative case 24‑C‑24‑000339. The case remains open and active. The AG’s Office represents MREC; Casey represents Register. No final ruling is issued as of May 2026.</p>
     </div>
   </div>
-</div>
 
-<!-- EVENT 10 — NORMAL — RIGHT -->
-<div class="timeline-row right">
-  <div class="timeline-bubble">
-    <div class="event-header">
-      <div class="event-icon normal">
-        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+  <!-- EVENT 10 — RIGHT -->
+  <div class="timeline-row right">
+    <div class="timeline-bubble">
+      <div class="event-header">
+        <div class="event-icon normal">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">Jul 10, 2025</div>
+          <div class="event-label">Civil</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">Jul 10, 2025</div>
-        <div class="event-label">Civil</div>
+
+      <h3 class="event-title">Daniel Register Relocates to Puerto Rico</h3>
+      <span class="status-tag status-documented">Documented</span>
+
+      <div class="event-body">
+        <p>Register relocates to Puerto Rico, vacating his Ashton, Maryland property. He remains listed as an active Northrop Realty licensee despite being physically outside Maryland, creating an unresolved alternative service challenge.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">Daniel Register Relocates to Puerto Rico</h3>
-    <span class="status-tag status-documented">Documented</span>
-
-    <div class="event-body">
-      <p>Register relocates to Puerto Rico, vacating his Ashton, Maryland property. He remains listed as an active Northrop Realty licensee despite being physically outside Maryland, creating an unresolved alternative service challenge.</p>
     </div>
   </div>
-</div>
-<!-- EVENT 11 — NORMAL — LEFT -->
-<div class="timeline-row left">
-  <div class="timeline-bubble">
-    <div class="event-header">
-      <div class="event-icon normal">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/>
-        </svg>
-      </div>
-      <div>
-        <div class="event-date">Late 2025</div>
-        <div class="event-label">Civil</div>
-      </div>
-    </div>
 
-    <h3 class="event-title">Civil Complaint Filed — Case No. C‑24‑CV‑25‑008195</h3>
-    <span class="status-tag status-filed">Filed</span>
+  <!-- EVENT 11 — LEFT -->
+  <div class="timeline-row left">
+    <div class="timeline-bubble">
+      <div class="event-header">
+        <div class="event-icon normal">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">Late 2025</div>
+          <div class="event-label">Civil</div>
+        </div>
+      </div>
 
-    <div class="event-body">
-      <p>Plaintiff files the civil complaint in Baltimore City Circuit Court against seven defendants: Daniel Register, Northrop Realty / The Creig Northrop Team P.C., Long & Foster Real Estate, HomeServices of America (HSoA), Maryland Association of REALTORS (MAR), Maryland Real Estate Commission (MREC), and McCalla Raymer LLP.</p>
-      <p>Total damages sought: <strong>$500 million</strong>. Claims include negligence, fraud, breach of fiduciary duty, trespass, conversion, and regulatory oversight failure. §362 bankruptcy stay violations are alleged as evidence of actual malice under Maryland law.</p>
+      <h3 class="event-title">Civil Complaint Filed — Case No. C‑24‑CV‑25‑008195</h3>
+      <span class="status-tag status-filed">Filed</span>
+
+      <div class="event-body">
+        <p>Plaintiff files the civil complaint in Baltimore City Circuit Court against seven defendants: Daniel Register, Northrop Realty / The Creig Northrop Team P.C., Long & Foster Real Estate, HomeServices of America (HSoA), Maryland Association of REALTORS (MAR), Maryland Real Estate Commission (MREC), and McCalla Raymer LLP.</p>
+        <p>Total damages sought: <strong>$500 million</strong>. Claims include negligence, fraud, breach of fiduciary duty, trespass, conversion, and regulatory oversight failure. §362 bankruptcy stay violations are alleged as evidence of actual malice under Maryland law.</p>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- EVENT 12 — SERVED — RIGHT -->
-<div class="timeline-row right">
-  <div class="timeline-bubble">
-    <div class="event-header">
-      <div class="event-icon normal">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/>
-        </svg>
+  <!-- EVENT 12 — RIGHT -->
+  <div class="timeline-row right">
+    <div class="timeline-bubble">
+      <div class="event-header">
+        <div class="event-icon normal">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">Feb 2, 2026</div>
+          <div class="event-label">Civil</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">Feb 2, 2026</div>
-        <div class="event-label">Civil</div>
+
+      <h3 class="event-title">Long & Foster and MAR Served</h3>
+      <span class="status-tag status-served">Served</span>
+
+      <div class="event-body">
+        <p>Long & Foster Real Estate and the Maryland Association of REALTORS (MAR) are served with the civil complaint. L&F’s 30‑day answer deadline runs to March 4, 2026. MAR’s 30‑day deadline also begins running.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">Long & Foster and MAR Served</h3>
-    <span class="status-tag status-served">Served</span>
-
-    <div class="event-body">
-      <p>Long & Foster Real Estate and the Maryland Association of REALTORS (MAR) are served with the civil complaint. L&F’s 30‑day answer deadline runs to March 4, 2026. MAR’s 30‑day deadline also begins running.</p>
     </div>
   </div>
-</div>
 
-<!-- EVENT 13 — FILED — LEFT -->
-<div class="timeline-row left">
-  <div class="timeline-bubble">
-    <div class="event-header">
-      <div class="event-icon normal">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/>
-        </svg>
+  <!-- EVENT 13 — LEFT -->
+  <div class="timeline-row left">
+    <div class="timeline-bubble">
+      <div class="event-header">
+        <div class="event-icon normal">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">Feb 10, 2026</div>
+          <div class="event-label">Civil</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">Feb 10, 2026</div>
-        <div class="event-label">Civil</div>
+
+      <h3 class="event-title">MAR Files First Motion to Dismiss — Service of Process</h3>
+      <span class="status-tag status-filed">Filed</span>
+
+      <div class="event-body">
+        <p>MAR files its first Motion to Dismiss for insufficiency of service of process — just 8 days after service. The timely motion tolls MAR’s time to answer under Md. Rule 2‑322(c). Plaintiff files Opposition.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">MAR Files First Motion to Dismiss — Service of Process</h3>
-    <span class="status-tag status-filed">Filed</span>
-
-    <div class="event-body">
-      <p>MAR files its first Motion to Dismiss for insufficiency of service of process — just 8 days after service. The timely motion tolls MAR’s time to answer under Md. Rule 2‑322(c). Plaintiff files Opposition.</p>
     </div>
   </div>
-</div>
 
-<!-- EVENT 14 — CRITICAL — RIGHT -->
-<div class="timeline-row right">
-  <div class="timeline-bubble critical">
-    <div class="event-header">
-      <div class="event-icon critical">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 2 1 21h22Zm1 14h-2v-2h2Zm0-4h-2V9h2Z"/>
-        </svg>
+  <!-- EVENT 14 — RIGHT -->
+  <div class="timeline-row right">
+    <div class="timeline-bubble critical">
+      <div class="event-header">
+        <div class="event-icon critical">
+          <svg viewBox="0 0 24 24"><path d="M12 2 1 21h22Zm1 14h-2v-2h2Zm0-4h-2V9h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">Mar 4, 2026</div>
+          <div class="event-label">Civil</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">Mar 4, 2026</div>
-        <div class="event-label">Civil</div>
+
+      <h3 class="event-title">Long & Foster Answer Deadline Expires — No Answer Filed</h3>
+      <span class="status-tag status-critical">Critical Event</span>
+
+      <div class="event-body">
+        <p>L&F’s 30‑day deadline to answer the complaint expires with no response filed. L&F does not move to extend, dismiss, or answer. Basis for an Order of Default is established under Md. Rule 2‑613.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">Long & Foster Answer Deadline Expires — No Answer Filed</h3>
-    <span class="status-tag status-critical">Critical Event</span>
-
-    <div class="event-body">
-      <p>L&F’s 30‑day deadline to answer the complaint expires with no response filed. L&F does not move to extend, dismiss, or answer. Basis for an Order of Default is established under Md. Rule 2‑613.</p>
     </div>
   </div>
-</div>
 
-<!-- EVENT 15 — SERVED — LEFT -->
-<div class="timeline-row left">
-  <div class="timeline-bubble">
-    <div class="event-header">
-      <div class="event-icon normal">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/>
-        </svg>
+  <!-- EVENT 15 — LEFT -->
+  <div class="timeline-row left">
+    <div class="timeline-bubble">
+      <div class="event-header">
+        <div class="event-icon normal">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">Mar 11, 2026</div>
+          <div class="event-label">Civil</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">Mar 11, 2026</div>
-        <div class="event-label">Civil</div>
+
+      <h3 class="event-title">HomeServices of America Served</h3>
+      <span class="status-tag status-served">Served</span>
+
+      <div class="event-body">
+        <p>HomeServices of America (HSoA), the parent corporation of Long & Foster and Northrop Realty, is served at its Maryland office. The 30‑day answer deadline begins running, expiring April 10, 2026.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">HomeServices of America Served</h3>
-    <span class="status-tag status-served">Served</span>
-
-    <div class="event-body">
-      <p>HomeServices of America (HSoA), the parent corporation of Long & Foster and Northrop Realty, is served at its Maryland office. The 30‑day answer deadline begins running, expiring April 10, 2026.</p>
     </div>
   </div>
-</div>
 
-<!-- EVENT 16 — ORDER ISSUED — RIGHT -->
-<div class="timeline-row right">
-  <div class="timeline-bubble">
-    <div class="event-header">
-      <div class="event-icon normal">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/>
-        </svg>
+  <!-- EVENT 16 — RIGHT -->
+  <div class="timeline-row right">
+    <div class="timeline-bubble">
+      <div class="event-header">
+        <div class="event-icon normal">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">Mar 16, 2026</div>
+          <div class="event-label">Civil</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">Mar 16, 2026</div>
-        <div class="event-label">Civil</div>
+
+      <h3 class="event-title">Scheduling Order Issued</h3>
+      <span class="status-tag status-order">Order Issued</span>
+
+      <div class="event-body">
+        <p>The court issues a Scheduling Order establishing deadlines for discovery, motions, and procedural milestones in Civil Case No. C‑24‑CV‑25‑008195.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">Scheduling Order Issued</h3>
-    <span class="status-tag status-order">Order Issued</span>
-
-    <div class="event-body">
-      <p>The court issues a Scheduling Order establishing deadlines for discovery, motions, and procedural milestones in Civil Case No. C‑24‑CV‑25‑008195.</p>
     </div>
   </div>
-</div>
 
-<!-- EVENT 17 — FILED / DENIED — LEFT -->
-<div class="timeline-row left">
-  <div class="timeline-bubble">
-    <div class="event-header">
-      <div class="event-icon normal">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/>
-        </svg>
+  <!-- EVENT 17 — LEFT -->
+  <div class="timeline-row left">
+    <div class="timeline-bubble">
+      <div class="event-header">
+        <div class="event-icon normal">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">Mar 20, 2026</div>
+          <div class="event-label">Civil</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">Mar 20, 2026</div>
-        <div class="event-label">Civil</div>
+
+      <h3 class="event-title">MAR Files Second Motion to Dismiss — Subject Matter Jurisdiction</h3>
+      <span class="status-tag status-filed">Filed — Later Denied</span>
+
+      <div class="event-body">
+        <p>MAR files a second Motion to Dismiss arguing that §362(k) bankruptcy claims belong exclusively in federal court. Plaintiff’s Opposition argues that §1334(b) expressly states jurisdiction is not exclusive and that the complaint asserts independent Maryland state‑law claims.</p>
+        <p>Both MAR motions to dismiss are ultimately <strong>DENIED</strong> by the court.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">MAR Files Second Motion to Dismiss — Subject Matter Jurisdiction</h3>
-    <span class="status-tag status-filed">Filed — Later Denied</span>
-
-    <div class="event-body">
-      <p>MAR files a second Motion to Dismiss arguing that §362(k) bankruptcy claims belong exclusively in federal court. Plaintiff’s Opposition argues that §1334(b) expressly states jurisdiction is not exclusive and that the complaint asserts independent Maryland state‑law claims.</p>
-      <p>Both MAR motions to dismiss are ultimately <strong>DENIED</strong> by the court.</p>
     </div>
   </div>
-</div>
-<!-- EVENT 18 — SERVED — RIGHT -->
-<div class="timeline-row right">
-  <div class="timeline-bubble">
-    <div class="event-header">
-      <div class="event-icon normal">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/>
-        </svg>
+  <!-- EVENT 18 — RIGHT -->
+  <div class="timeline-row right">
+    <div class="timeline-bubble">
+      <div class="event-header">
+        <div class="event-icon normal">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">Mar 26, 2026</div>
+          <div class="event-label">Civil</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">Mar 26, 2026</div>
-        <div class="event-label">Civil</div>
+
+      <h3 class="event-title">Northrop Realty / The Creig Northrop Team Served</h3>
+      <span class="status-tag status-served">Served</span>
+
+      <div class="event-body">
+        <p>Northrop Realty and The Creig Northrop Team, P.C. are served with the civil complaint. Casey later falsely claims in an April 3 email that “CNT has not been served,” contradicted by Plaintiff’s proof of service.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">Northrop Realty / The Creig Northrop Team Served</h3>
-    <span class="status-tag status-served">Served</span>
-
-    <div class="event-body">
-      <p>Northrop Realty and The Creig Northrop Team, P.C. are served with the civil complaint. Casey later falsely claims in an April 3 email that “CNT has not been served,” contradicted by Plaintiff’s proof of service.</p>
     </div>
   </div>
-</div>
 
-<!-- EVENT 19 — CRITICAL — LEFT -->
-<div class="timeline-row left">
-  <div class="timeline-bubble critical">
-    <div class="event-header">
-      <div class="event-icon critical">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 2 1 21h22Zm1 14h-2v-2h2Zm0-4h-2V9h2Z"/>
-        </svg>
+  <!-- EVENT 19 — LEFT -->
+  <div class="timeline-row left">
+    <div class="timeline-bubble critical">
+      <div class="event-header">
+        <div class="event-icon critical">
+          <svg viewBox="0 0 24 24"><path d="M12 2 1 21h22Zm1 14h-2v-2h2Zm0-4h-2V9h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">Apr 3, 2026</div>
+          <div class="event-label">Civil</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">Apr 3, 2026</div>
-        <div class="event-label">Civil</div>
+
+      <h3 class="event-title">Casey Files Untimely L&F Motion to Dismiss — Plaintiff Responds in One Hour</h3>
+      <span class="status-tag status-critical">Critical Event</span>
+
+      <div class="event-body">
+        <p>Attorney Timothy Casey files a Motion to Dismiss on behalf of Long & Foster — <strong>30 days after</strong> L&F’s answer deadline expired. The filing is untimely under Md. Rule 2‑321(a).</p>
+        <p>Plaintiff files her Opposition within one hour (Motion at 11:07 AM; Opposition at 12:07 PM). Casey simultaneously files on behalf of Northrop/CNT — that filing is timely.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">Casey Files Untimely L&F Motion to Dismiss — Plaintiff Responds in One Hour</h3>
-    <span class="status-tag status-critical">Critical Event</span>
-
-    <div class="event-body">
-      <p>Attorney Timothy Casey files a Motion to Dismiss on behalf of Long & Foster — <strong>30 days after</strong> L&F’s answer deadline expired. The filing is untimely under Md. Rule 2‑321(a).</p>
-      <p>Plaintiff files her Opposition within one hour (Motion at 11:07 AM; Opposition at 12:07 PM). Casey simultaneously files on behalf of Northrop/CNT — that filing is timely.</p>
     </div>
   </div>
-</div>
 
-<!-- EVENT 20 — DEADLINE EXPIRED — RIGHT -->
-<div class="timeline-row right">
-  <div class="timeline-bubble">
-    <div class="event-header">
-      <div class="event-icon normal">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/>
-        </svg>
+  <!-- EVENT 20 — RIGHT -->
+  <div class="timeline-row right">
+    <div class="timeline-bubble">
+      <div class="event-header">
+        <div class="event-icon normal">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">Apr 10, 2026</div>
+          <div class="event-label">Civil</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">Apr 10, 2026</div>
-        <div class="event-label">Civil</div>
+
+      <h3 class="event-title">HSoA Answer Deadline Expires — No Answer Filed</h3>
+      <span class="status-tag status-default">Default Basis</span>
+
+      <div class="event-body">
+        <p>HomeServices of America’s 30‑day answer deadline expires with no answer, motion, or extension filed. Basis for an Order of Default is established. Plaintiff initiates default proceedings.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">HSoA Answer Deadline Expires — No Answer Filed</h3>
-    <span class="status-tag status-default">Default Basis</span>
-
-    <div class="event-body">
-      <p>HomeServices of America’s 30‑day answer deadline expires with no answer, motion, or extension filed. Basis for an Order of Default is established. Plaintiff initiates default proceedings.</p>
     </div>
   </div>
-</div>
 
-<!-- EVENT 21 — FILED — LEFT -->
-<div class="timeline-row left">
-  <div class="timeline-bubble">
-    <div class="event-header">
-      <div class="event-icon normal">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/>
-        </svg>
+  <!-- EVENT 21 — LEFT -->
+  <div class="timeline-row left">
+    <div class="timeline-bubble">
+      <div class="event-header">
+        <div class="event-icon normal">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">Apr 17, 2026</div>
+          <div class="event-label">Civil</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">Apr 17, 2026</div>
-        <div class="event-label">Civil</div>
+
+      <h3 class="event-title">MAR Discovery Responses Filed — Seven Contradictions</h3>
+      <span class="status-tag status-filed">Filed — Deficient</span>
+
+      <div class="event-body">
+        <p>MAR files sworn discovery responses containing seven documented contradictions, including denials of employee knowledge while admitting a Grievance Committee exists, and denying oversight while admitting ethics enforcement policies.</p>
+        <p>MAR produces only one page of documents — a publicly available docket printout — despite admitting the existence of complaint records, ethics policies, and Grievance Committee files.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">MAR Discovery Responses Filed — Seven Contradictions</h3>
-    <span class="status-tag status-filed">Filed — Deficient</span>
-
-    <div class="event-body">
-      <p>MAR files sworn discovery responses containing seven documented contradictions, including denials of employee knowledge while admitting a Grievance Committee exists, and denying oversight while admitting ethics enforcement policies.</p>
-      <p>MAR produces only one page of documents — a publicly available docket printout — despite admitting the existence of complaint records, ethics policies, and Grievance Committee files.</p>
     </div>
   </div>
-</div>
 
-<!-- EVENT 22 — FILED — RIGHT -->
-<div class="timeline-row right">
-  <div class="timeline-bubble">
-    <div class="event-header">
-      <div class="event-icon normal">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/>
-        </svg>
+  <!-- EVENT 22 — RIGHT -->
+  <div class="timeline-row right">
+    <div class="timeline-bubble">
+      <div class="event-header">
+        <div class="event-icon normal">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">Apr 17, 2026</div>
+          <div class="event-label">Civil</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">Apr 17, 2026</div>
-        <div class="event-label">Civil</div>
+
+      <h3 class="event-title">Casey Opposes Alternative Service for Register</h3>
+      <span class="status-tag status-filed">Filed</span>
+
+      <div class="event-body">
+        <p>Casey files a formal Opposition to Plaintiff’s Motion for Alternative Service on behalf of Register — confirming he is now counsel of record for Register in the civil case.</p>
+        <p>Register’s affidavit reveals he has been in Puerto Rico since July 10, 2025. Casey now represents five defendants: HSoA, L&F, Northrop/CNT, Register, and as defense counsel.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">Casey Opposes Alternative Service for Register</h3>
-    <span class="status-tag status-filed">Filed</span>
-
-    <div class="event-body">
-      <p>Casey files a formal Opposition to Plaintiff’s Motion for Alternative Service on behalf of Register — confirming he is now counsel of record for Register in the civil case.</p>
-      <p>Register’s affidavit reveals he has been in Puerto Rico since July 10, 2025. Casey now represents five defendants: HSoA, L&F, Northrop/CNT, Register, and as defense counsel.</p>
     </div>
   </div>
-</div>
 
-<!-- EVENT 23 — SERVED — LEFT -->
-<div class="timeline-row left">
-  <div class="timeline-bubble">
-    <div class="event-header">
-      <div class="event-icon normal">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/>
-        </svg>
+  <!-- EVENT 23 — LEFT -->
+  <div class="timeline-row left">
+    <div class="timeline-bubble">
+      <div class="event-header">
+        <div class="event-icon normal">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">Apr 18, 2026</div>
+          <div class="event-label">Civil</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">Apr 18, 2026</div>
-        <div class="event-label">Civil</div>
+
+      <h3 class="event-title">Northrop/CNT Discovery Served — Notice Filed</h3>
+      <span class="status-tag status-served">Served</span>
+
+      <div class="event-body">
+        <p>Plaintiff serves initial and supplemental discovery on Northrop Realty / The Creig Northrop Team, including Interrogatories Sets 1–3, RFP Sets 1–2, and RFA Sets 1–2. Supplemental sets target administrative case 24‑C‑24‑000339.</p>
+        <p>The court is placed on notice via a Notice of Discovery filed the same day. Northrop’s response deadline is May 18, 2026.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">Northrop/CNT Discovery Served — Notice Filed</h3>
-    <span class="status-tag status-served">Served</span>
-
-    <div class="event-body">
-      <p>Plaintiff serves initial and supplemental discovery on Northrop Realty / The Creig Northrop Team, including Interrogatories Sets 1–3, RFP Sets 1–2, and RFA Sets 1–2. Supplemental sets target administrative case 24‑C‑24‑000339.</p>
-      <p>The court is placed on notice via a Notice of Discovery filed the same day. Northrop’s response deadline is May 18, 2026.</p>
     </div>
   </div>
-</div>
 
-<!-- EVENT 24 — CRITICAL — RIGHT -->
-<div class="timeline-row right">
-  <div class="timeline-bubble critical">
-    <div class="event-header">
-      <div class="event-icon critical">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 2 1 21h22Zm1 14h-2v-2h2Zm0-4h-2V9h2Z"/>
-        </svg>
+  <!-- EVENT 24 — RIGHT -->
+  <div class="timeline-row right">
+    <div class="timeline-bubble critical">
+      <div class="event-header">
+        <div class="event-icon critical">
+          <svg viewBox="0 0 24 24"><path d="M12 2 1 21h22Zm1 14h-2v-2h2Zm0-4h-2V9h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">Apr 23, 2026</div>
+          <div class="event-label">Civil</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">Apr 23, 2026</div>
-        <div class="event-label">Civil</div>
+
+      <h3 class="event-title">Order of Default Entered Against Long & Foster</h3>
+      <span class="status-tag status-default">Default Entered</span>
+
+      <div class="event-body">
+        <p>Judge Catherine Chen enters an Order of Default against Long & Foster for failure to timely answer. L&F’s untimely April 3 MTD — filed 30 days after the deadline — does not cure the default under Maryland law.</p>
+        <p>This is the first formal default entered in the case.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">Order of Default Entered Against Long & Foster</h3>
-    <span class="status-tag status-default">Default Entered</span>
-
-    <div class="event-body">
-      <p>Judge Catherine Chen enters an Order of Default against Long & Foster for failure to timely answer. L&F’s untimely April 3 MTD — filed 30 days after the deadline — does not cure the default under Maryland law.</p>
-      <p>This is the first formal default entered in the case.</p>
     </div>
   </div>
-</div>
 
-<!-- EVENT 25 — FILED — LEFT -->
-<div class="timeline-row left">
-  <div class="timeline-bubble">
-    <div class="event-header">
-      <div class="event-icon normal">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/>
-        </svg>
+  <!-- EVENT 25 — LEFT -->
+  <div class="timeline-row left">
+    <div class="timeline-bubble">
+      <div class="event-header">
+        <div class="event-icon normal">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">Apr 25–27, 2026</div>
+          <div class="event-label">Civil</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">Apr 25–27, 2026</div>
-        <div class="event-label">Civil</div>
+
+      <h3 class="event-title">Motion to Vacate L&F Default — Three Affidavits Filed</h3>
+      <span class="status-tag status-filed">Filed — Pending</span>
+
+      <div class="event-body">
+        <p>Three affidavits are filed in support of a Motion to Vacate the L&F default:</p>
+        <p><strong>(1)</strong> Daniel Register (Apr 25)  
+           <strong>(2)</strong> Nick D’Ambrosia as L&F Broker (Apr 26) — the same D’Ambrosia cc’d on the MREC dismissal  
+           <strong>(3)</strong> Timothy Casey (Apr 27)</p>
+        <p>D’Ambrosia attests to L&F’s “meritorious defenses” while having personal knowledge of the MREC complaint and Register’s conduct.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">Motion to Vacate L&F Default — Three Affidavits Filed</h3>
-    <span class="status-tag status-filed">Filed — Pending</span>
-
-    <div class="event-body">
-      <p>Three affidavits are filed in support of a Motion to Vacate the L&F default:</p>
-      <p><strong>(1)</strong> Daniel Register (Apr 25)  
-         <strong>(2)</strong> Nick D’Ambrosia as L&F Broker (Apr 26) — the same D’Ambrosia cc’d on the MREC dismissal  
-         <strong>(3)</strong> Timothy Casey (Apr 27)</p>
-      <p>D’Ambrosia attests to L&F’s “meritorious defenses” while having personal knowledge of the MREC complaint and Register’s conduct.</p>
     </div>
   </div>
-</div>
 
-<!-- EVENT 26 — SERVED — RIGHT -->
-<div class="timeline-row right">
-  <div class="timeline-bubble">
-    <div class="event-header">
-      <div class="event-icon normal">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/>
-        </svg>
+  <!-- EVENT 26 — RIGHT -->
+  <div class="timeline-row right">
+    <div class="timeline-bubble">
+      <div class="event-header">
+        <div class="event-icon normal">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">Apr 28, 2026</div>
+          <div class="event-label">Civil</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">Apr 28, 2026</div>
-        <div class="event-label">Civil</div>
+
+      <h3 class="event-title">RFA Set 2 Served on Northrop and MAR</h3>
+      <span class="status-tag status-served">Served</span>
+
+      <div class="event-body">
+        <p>Plaintiff serves Request for Admissions Set 2 on both Northrop Realty/CNT and MAR. Requests target liability admissions, agency relationships, and knowledge of bankruptcy stay violations.</p>
+        <p>Filed with Notice of Service to the court.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">RFA Set 2 Served on Northrop and MAR</h3>
-    <span class="status-tag status-served">Served</span>
-
-    <div class="event-body">
-      <p>Plaintiff serves Request for Admissions Set 2 on both Northrop Realty/CNT and MAR. Requests target liability admissions, agency relationships, and knowledge of bankruptcy stay violations.</p>
-      <p>Filed with Notice of Service to the court.</p>
     </div>
   </div>
-</div>
-<!-- EVENT 27 — FILED — LEFT -->
-<div class="timeline-row left">
-  <div class="timeline-bubble">
-    <div class="event-header">
-      <div class="event-icon normal">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/>
-        </svg>
-      </div>
-      <div>
-        <div class="event-date">May 6, 2026</div>
-        <div class="event-label">Civil</div>
-      </div>
-    </div>
 
-    <h3 class="event-title">Plaintiff Files Reply to MAR’s Opposition to Motion to Compel</h3>
-    <span class="status-tag status-filed">Filed</span>
+  <!-- EVENT 27 — LEFT -->
+  <div class="timeline-row left">
+    <div class="timeline-bubble">
+      <div class="event-header">
+        <div class="event-icon normal">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">May 6, 2026</div>
+          <div class="event-label">Civil</div>
+        </div>
+      </div>
 
-    <div class="event-body">
-      <p>Plaintiff files a six‑section reply dismantling MAR’s opposition to the Motion to Compel Discovery — using MAR’s own exhibits against them.</p>
-      <p>Key arguments include: four privilege assertions without a single privilege log (Md. Rule 2‑402(f)(1)(B)); MAR’s refusal to participate in the Rule 2‑401(c) discovery‑planning conference; and MAR’s continued use of language contradicting prior court rulings.</p>
+      <h3 class="event-title">Plaintiff Files Reply to MAR’s Opposition to Motion to Compel</h3>
+      <span class="status-tag status-filed">Filed</span>
+
+      <div class="event-body">
+        <p>Plaintiff files a six‑section reply dismantling MAR’s opposition to the Motion to Compel Discovery — using MAR’s own exhibits against them.</p>
+        <p>Key arguments include: four privilege assertions without a single privilege log (Md. Rule 2‑402(f)(1)(B)); MAR’s refusal to participate in the Rule 2‑401(c) discovery‑planning conference; and MAR’s continued use of language contradicting prior court rulings.</p>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- EVENT 28 — FILED — RIGHT -->
-<div class="timeline-row right">
-  <div class="timeline-bubble">
-    <div class="event-header">
-      <div class="event-icon normal">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/>
-        </svg>
+  <!-- EVENT 28 — RIGHT -->
+  <div class="timeline-row right">
+    <div class="timeline-bubble">
+      <div class="event-header">
+        <div class="event-icon normal">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">May 7, 2026</div>
+          <div class="event-label">Civil</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">May 7, 2026</div>
-        <div class="event-label">Civil</div>
+
+      <h3 class="event-title">Notice of Lis Pendens Filed in Land Records</h3>
+      <span class="status-tag status-filed">Filed</span>
+
+      <div class="event-body">
+        <p>Plaintiff files a Notice of Lis Pendens in the Baltimore City Land Records and serves notice on the mortgage servicer, creating a public cloud on title reflecting the pending litigation over 2831 E. Northern Parkway.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">Notice of Lis Pendens Filed in Land Records</h3>
-    <span class="status-tag status-filed">Filed</span>
-
-    <div class="event-body">
-      <p>Plaintiff files a Notice of Lis Pendens in the Baltimore City Land Records and serves notice on the mortgage servicer, creating a public cloud on title reflecting the pending litigation over 2831 E. Northern Parkway.</p>
     </div>
   </div>
-</div>
 
-<!-- EVENT 29 — CRITICAL — LEFT -->
-<div class="timeline-row left">
-  <div class="timeline-bubble critical">
-    <div class="event-header">
-      <div class="event-icon critical">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 2 1 21h22Zm1 14h-2v-2h2Zm0-4h-2V9h2Z"/>
-        </svg>
+  <!-- EVENT 29 — LEFT -->
+  <div class="timeline-row left">
+    <div class="timeline-bubble critical">
+      <div class="event-header">
+        <div class="event-icon critical">
+          <svg viewBox="0 0 24 24"><path d="M12 2 1 21h22Zm1 14h-2v-2h2Zm0-4h-2V9h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">May 10, 2026</div>
+          <div class="event-label">Civil</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">May 10, 2026</div>
-        <div class="event-label">Civil</div>
+
+      <h3 class="event-title">HSoA 60‑Day Answer Deadline Expires</h3>
+      <span class="status-tag status-critical">Critical Event</span>
+
+      <div class="event-body">
+        <p>HSoA’s extended 60‑day answer deadline expires with no answer filed. Plaintiff files for an Order of Default. Casey represents HSoA but has filed nothing on its behalf since service on March 11 — now 60 days of silence from the parent corporation of L&F and Northrop.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">HSoA 60‑Day Answer Deadline Expires</h3>
-    <span class="status-tag status-critical">Critical Event</span>
-
-    <div class="event-body">
-      <p>HSoA’s extended 60‑day answer deadline expires with no answer filed. Plaintiff files for an Order of Default. Casey represents HSoA but has filed nothing on its behalf since service on March 11 — now 60 days of silence from the parent corporation of L&F and Northrop.</p>
     </div>
   </div>
-</div>
 
-<!-- EVENT 30 — CRITICAL — RIGHT -->
-<div class="timeline-row right">
-  <div class="timeline-bubble critical">
-    <div class="event-header">
-      <div class="event-icon critical">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 2 1 21h22Zm1 14h-2v-2h2Zm0-4h-2V9h2Z"/>
-        </svg>
+  <!-- EVENT 30 — RIGHT -->
+  <div class="timeline-row right">
+    <div class="timeline-bubble critical">
+      <div class="event-header">
+        <div class="event-icon critical">
+          <svg viewBox="0 0 24 24"><path d="M12 2 1 21h22Zm1 14h-2v-2h2Zm0-4h-2V9h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">May 13, 2026</div>
+          <div class="event-label">Civil</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">May 13, 2026</div>
-        <div class="event-label">Civil</div>
+
+      <h3 class="event-title">Daniel Register’s Maryland Real Estate License Expires</h3>
+      <span class="status-tag status-critical">Critical Event</span>
+
+      <div class="event-body">
+        <p>Register’s Maryland real estate license — held under Northrop Realty — expires two days before the May 15 chambers hearing. Register has been residing in Puerto Rico since July 10, 2025 (~10 months), yet remains listed on Northrop’s roster without physical supervision.</p>
+        <p>Register either renews from Puerto Rico or becomes unlicensed.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">Daniel Register’s Maryland Real Estate License Expires</h3>
-    <span class="status-tag status-critical">Critical Event</span>
-
-    <div class="event-body">
-      <p>Register’s Maryland real estate license — held under Northrop Realty — expires two days before the May 15 chambers hearing. Register has been residing in Puerto Rico since July 10, 2025 (~10 months), yet remains listed on Northrop’s roster without physical supervision.</p>
-      <p>Register either renews from Puerto Rico or becomes unlicensed.</p>
     </div>
   </div>
-</div>
 
-<!-- EVENT 31 — CRITICAL — LEFT -->
-<div class="timeline-row left">
-  <div class="timeline-bubble critical">
-    <div class="event-header">
-      <div class="event-icon critical">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 2 1 21h22Zm1 14h-2v-2h2Zm0-4h-2V9h2Z"/>
-        </svg>
+  <!-- EVENT 31 — LEFT -->
+  <div class="timeline-row left">
+    <div class="timeline-bubble critical">
+      <div class="event-header">
+        <div class="event-icon critical">
+          <svg viewBox="0 0 24 24"><path d="M12 2 1 21h22Zm1 14h-2v-2h2Zm0-4h-2V9h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">May 15, 2026</div>
+          <div class="event-label">Civil</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">May 15, 2026</div>
-        <div class="event-label">Civil</div>
+
+      <h3 class="event-title">Chambers Hearing Before Judge Carrión</h3>
+      <span class="status-tag status-hearing">Hearing Held</span>
+
+      <div class="event-body">
+        <p>Chambers hearing held before Judge Carrión. All pending motions are before the court, including:</p>
+        <p>• L&F Motion to Vacate Default  
+           • HSoA default status  
+           • MAR MTDs (both denied)  
+           • Motion to Compel and alternative service motions.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">Chambers Hearing Before Judge Carrión</h3>
-    <span class="status-tag status-hearing">Hearing Held</span>
-
-    <div class="event-body">
-      <p>Chambers hearing held before Judge Carrión. All pending motions are before the court, including:</p>
-      <p>• L&F Motion to Vacate Default  
-         • HSoA default status  
-         • MAR MTDs (both denied)  
-         • Motion to Compel against MAR  
-         • Alternative service on Register and McCalla Raymer</p>
-      <p>This is the first substantive judicial review of all seven defendants’ posture in the civil case.</p>
     </div>
   </div>
-</div>
 
-<!-- EVENT 32 — PENDING — RIGHT -->
-<div class="timeline-row right">
-  <div class="timeline-bubble">
-    <div class="event-header">
-      <div class="event-icon normal">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/>
-        </svg>
+  <!-- EVENT 32 — RIGHT -->
+  <div class="timeline-row right">
+    <div class="timeline-bubble">
+      <div class="event-header">
+        <div class="event-icon normal">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">May 18, 2026</div>
+          <div class="event-label">Civil</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">May 18, 2026</div>
-        <div class="event-label">Civil</div>
+
+      <h3 class="event-title">Northrop/CNT Discovery Deadline</h3>
+      <span class="status-tag status-default">Deadline</span>
+
+      <div class="event-body">
+        <p>Northrop/CNT’s responses to all outstanding discovery are due. Non‑compliance supports a Motion to Compel and sanctions.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">Northrop/CNT Discovery Response Deadline</h3>
-    <span class="status-tag status-pending">Pending</span>
-
-    <div class="event-body">
-      <p>Northrop Realty / The Creig Northrop Team’s deadline to respond to all outstanding discovery — including initial and supplemental sets served April 18 — is May 18, 2026.</p>
-      <p>Non‑compliance would support a Motion to Compel and sanctions request.</p>
     </div>
   </div>
-</div>
 
-<!-- EVENT 33 — UPCOMING — LEFT -->
-<div class="timeline-row left">
-  <div class="timeline-bubble">
-    <div class="event-header">
-      <div class="event-icon normal">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/>
-        </svg>
+  <!-- EVENT 33 — LEFT -->
+  <div class="timeline-row left">
+    <div class="timeline-bubble">
+      <div class="event-header">
+        <div class="event-icon normal">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+        </div>
+        <div>
+          <div class="event-date">Aug 2026</div>
+          <div class="event-label">Civil</div>
+        </div>
       </div>
-      <div>
-        <div class="event-date">Aug 2026</div>
-        <div class="event-label">Civil</div>
+
+      <h3 class="event-title">Amended Complaint Deadline</h3>
+      <span class="status-tag status-default">Scheduling Order</span>
+
+      <div class="event-body">
+        <p>The Scheduling Order sets the deadline for Plaintiff to file the Amended Complaint, adding a fully developed punitive damages section, systemic‑failure timeline exhibit, and refined damages framework.</p>
       </div>
-    </div>
-
-    <h3 class="event-title">Amended Complaint Deadline</h3>
-    <span class="status-tag status-upcoming">Upcoming</span>
-
-    <div class="event-body">
-      <p>The Scheduling Order sets the deadline for Plaintiff to file the Amended Complaint, which will add a fully developed punitive damages section with defendant‑specific actual malice allegations, a systemic‑failure timeline exhibit, and refined damages framework across all seven defendants.</p>
-      <p>Structured subtotal: $325M; total demand: $500M.</p>
     </div>
   </div>
-</div>
+
+</div> <!-- end .timeline -->
+
+<footer style="margin-top:40px; padding:20px; text-align:center; border-top:2px solid var(--gold); color:#ffffff;">
+  <p style="margin:4px 0; font-size:11pt;">
+    Interactive Timeline prepared by <strong>LaToya Holmes</strong> · ProSeLitCoach.com
+  </p>
+  <p style="margin:4px 0; font-size:10pt;">
+    Based on filed pleadings, administrative records, and court dockets as of the dates indicated.
+  </p>
+</footer>
+
+</body>
+</html>
