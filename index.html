@@ -2,126 +2,179 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Maryland Real Estate Systemic Failure — Holmes v. Northrop Realty et al Defendants</title>
+    <title>Holmes v. Northrop Realty — Interactive Case Timeline</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO & Social Metadata -->
-    <meta name="description" content="A detailed, documented timeline exposing systemic failures across Maryland real estate oversight, including the Maryland Real Estate Commission (MREC), the Maryland Association of REALTORS (MAR), and major brokerages.">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Maryland Real Estate Systemic Failure — Holmes v. Northrop Realty et al Defendants">
-    <meta property="og:description" content="A detailed, documented timeline exposing systemic failures across Maryland real estate oversight, including the Maryland Real Estate Commission (MREC), the Maryland Association of REALTORS (MAR), and major brokerages.">
-    <meta property="og:image" content="preview.png">
-    <meta property="og:image:alt" content="Holmes v. Northrop — Case Timeline">
-    <meta property="og:url" content="https://YOURUSERNAME.github.io/YOUR-REPO/">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Maryland Real Estate Systemic Failure — Holmes v. Northrop Realty et al Defendants">
-    <meta name="twitter:description" content="A detailed, documented timeline exposing systemic failures across Maryland real estate oversight, including the Maryland Real Estate Commission (MREC), the Maryland Association of REALTORS (MAR), and major brokerages.">
-    <meta name="twitter:image" content="preview.png">
+    <!-- SEO -->
+    <meta name="description" content="Interactive investigative timeline documenting systemic failures in Maryland real estate oversight. Holmes v. Northrop Realty et al.">
 
     <style>
-        :root { color-scheme: light only; }
+        :root {
+            --gold: #D4AF37;
+            --gold-light: #E8D28B;
+            --red: #B30000;
+            --bg: #ffffff;
+            --text: #1a1a1a;
+        }
+
         body {
             font-family: Calibri, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            font-size: 11pt;
+            background: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
             line-height: 1.5;
-            color: #000;
-            background: #fff;
-            max-width: 960px;
+        }
+
+        /* HEADER */
+        header {
+            text-align: center;
+            padding: 32px 16px 16px 16px;
+            border-bottom: 2px solid var(--gold);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 28pt;
+            letter-spacing: 1.5pt;
+        }
+        header p {
+            margin: 4px 0;
+            font-size: 11pt;
+        }
+
+        /* LAYOUT */
+        .container {
+            max-width: 900px;
             margin: 0 auto;
-            padding: 32px 16px 48px 16px;
+            padding: 24px 16px;
+            display: flex;
+            gap: 24px;
         }
-        header { text-align: center; margin-bottom: 18px; }
-        .cover-header-label {
-            font-size: 9pt; font-weight: bold; color: #1e3a6e;
-            letter-spacing: 1.5pt; margin-bottom: 4px; text-transform: uppercase;
-        }
-        h1 { font-size: 26pt; font-weight: bold; margin: 0 0 4px 0; color: #1a1a1a; letter-spacing: 1.5pt; }
-        .cover-subtitle { font-size: 13pt; font-weight: bold; color: #1a1a1a; margin-bottom: 4px; }
-        .cover-casenums { font-size: 10pt; font-weight: bold; color: #1e3a6e; margin-bottom: 6px; }
-        .cover-tagline { font-size: 9.5pt; font-style: italic; color: #444; margin-bottom: 10px; }
 
-        .top-bar { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start; margin-bottom: 16px; }
-        .top-main { flex: 1 1 60%; min-width: 260px; }
-        .top-side { flex: 1 1 35%; min-width: 220px; }
-
-        hr.section-rule { border: none; border-top: 2px solid #1e3a6e; margin: 10pt 0 12pt 0; }
-        hr.event-rule { border: none; border-top: 1px solid #ccc; margin: 10pt 0 6pt 0; }
-
-        table.stat-table { width: 100%; border-collapse: collapse; margin: 8pt 0 10pt 0; }
-        table.stat-table td {
-            border: none; width: 50%; background-color: #f0f4f9;
-            padding: 10px 14px; vertical-align: middle;
-        }
-        table.stat-table td.stat-cell-alt { background-color: #e6edf7; }
-        .stat-label { font-size: 8.5pt; font-weight: bold; color: #1e3a6e; letter-spacing: 0.5pt; display: block; margin-bottom: 2pt; text-transform: uppercase; }
-        .stat-value { font-size: 14pt; font-weight: bold; color: #1a1a1a; display: block; }
-
-        .legend-table { width: 100%; border-collapse: collapse; margin: 4pt 0 8pt 0; }
-        .legend-table td { border: none; padding: 3px 8px; font-size: 10pt; vertical-align: middle; }
-        .legend-admin { color: #1e3a6e; font-weight: bold; }
-        .legend-civil { color: #0d5c5c; font-weight: bold; }
-        .legend-critical { color: #8b0000; font-weight: bold; }
-        .legend-label { font-size: 9.5pt; }
-
-        .badge-admin, .badge-civil, .badge-critical {
-            font-family: Calibri, sans-serif; font-size: 9pt; font-weight: bold;
-            color: #fff; padding: 1px 6px; margin-right: 4pt;
-        }
-        .badge-admin { background-color: #1e3a6e; }
-        .badge-civil { background-color: #0d5c5c; }
-        .badge-critical { background-color: #8b0000; }
-
-        h2 { font-size: 13pt; font-weight: bold; margin-top: 10pt; margin-bottom: 3pt; line-height: 1.3; }
-        h2.track-admin { color: #1e3a6e; }
-        h2.track-civil { color: #0d5c5c; }
-        h2.track-critical { color: #8b0000; }
-
-        h3 { font-size: 11.5pt; font-weight: bold; margin-top: 4pt; margin-bottom: 3pt; color: #1a1a1a; }
-        p { margin-top: 0; margin-bottom: 5pt; font-size: 11pt; }
-        p.status-line { font-style: italic; font-size: 10pt; color: #333; margin-left: 18pt; margin-top: 4pt; margin-bottom: 6pt; }
-
-        .event-number { font-size: 8.5pt; font-weight: bold; color: #888; margin-bottom: 0; }
-        .event-block { margin-bottom: 0; page-break-inside: avoid; }
-
-        .timeline-header { font-size: 10pt; font-weight: bold; color: #1a1a1a; margin-bottom: 8pt; text-align: center; }
-
-        .btn-bar { margin: 8pt 0 10pt 0; }
-        .btn-primary {
-            display: inline-block; padding: 6px 12px; font-size: 10pt; font-weight: bold;
-            color: #fff; background-color: #1e3a6e; text-decoration: none; border-radius: 3px; margin-right: 8px;
-        }
-        .btn-primary:hover { background-color: #163056; }
-
+        /* SIDEBAR */
         .sidebar {
-            border: 1px solid #d0d7e2; background-color: #f5f7fb;
-            padding: 10px 12px; border-radius: 4px;
+            width: 240px;
+            border: 1px solid #ddd;
+            padding: 12px;
+            border-radius: 6px;
+            background: #fafafa;
+            height: fit-content;
         }
         .sidebar-title {
-            font-size: 10pt; font-weight: bold; color: #1e3a6e;
-            margin-bottom: 4pt; text-transform: uppercase; letter-spacing: 0.5pt;
+            font-weight: bold;
+            color: var(--gold);
+            margin-bottom: 8px;
+            font-size: 11pt;
         }
-        .sidebar ul { margin: 4pt 0 0 16px; padding-left: 0; }
-        .sidebar li { font-size: 10pt; margin-bottom: 3pt; }
-        .sidebar a { color: #0d5c5c; text-decoration: none; }
-        .sidebar a:hover { text-decoration: underline; }
+        .sidebar ul {
+            padding-left: 18px;
+            margin: 0;
+        }
+        .sidebar li {
+            margin-bottom: 6px;
+            font-size: 10.5pt;
+        }
 
-        footer {
-            margin-top: 28pt; border-top: 2px solid #1e3a6e;
-            padding-top: 8pt; text-align: center;
+        /* TIMELINE */
+        .timeline {
+            flex: 1;
+            position: relative;
+            padding-left: 40px;
         }
-        .footer-text { font-size: 8.5pt; color: #555; margin-bottom: 2pt; }
-        .footer-brand { font-size: 8.5pt; color: #1e3a6e; font-weight: bold; }
 
-        @media (max-width: 720px) {
-            body { padding: 16px 10px 32px 10px; }
-            .top-bar { flex-direction: column; }
+        /* GOLD VERTICAL SPINE */
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 18px;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gold);
+            border-radius: 2px;
         }
-        @media print {
-            body { padding: 0; max-width: none; }
-            .event-block { page-break-inside: avoid; }
-            .btn-bar, .sidebar { display: none; }
+
+        /* EVENT BLOCK */
+        .event {
+            position: relative;
+            margin-bottom: 32px;
+            padding-left: 24px;
+        }
+
+        /* EVENT BUBBLE */
+        .bubble {
+            position: absolute;
+            left: -2px;
+            top: 4px;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--gold);
+            border: 3px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.2s ease;
+        }
+
+        /* CRITICAL EVENT BUBBLE */
+        .bubble-critical {
+            border-color: var(--red);
+        }
+
+        /* SVG ICONS */
+        .bubble svg {
+            width: 14px;
+            height: 14px;
+            fill: #fff;
+        }
+
+        /* EVENT CARD */
+        .event-card {
+            background: #fff;
+            border-left: 4px solid var(--gold);
+            padding: 12px 16px;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        }
+
+        .event h3 {
+            margin: 0 0 4px 0;
+            font-size: 13pt;
+        }
+
+        .event-date {
+            font-size: 10pt;
+            font-weight: bold;
+            color: var(--gold);
+            margin-bottom: 6px;
+        }
+
+        .critical .event-date {
+            color: var(--red);
+        }
+
+        .event p {
+            margin: 4px 0;
+            font-size: 11pt;
+        }
+
+        /* HOVER EFFECT */
+        .event:hover .bubble {
+            box-shadow: 0 0 8px var(--gold-light);
+        }
+        .event.critical:hover .bubble-critical {
+            box-shadow: 0 0 8px var(--red);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 760px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -129,346 +182,585 @@
 <body>
 
 <header>
-    <p class="cover-header-label">PRESS KIT &amp; COURT EXHIBIT — FOR IMMEDIATE DISTRIBUTION</p>
-    <h1>CASE TIMELINE</h1>
-    <p class="cover-subtitle">Holmes v. Northrop Realty et al. &amp; Maryland Real Estate Commission Administrative Appeal</p>
-    <p class="cover-casenums">Civil Case No. C-24-CV-25-008195 &nbsp;|&nbsp; Admin Appeal No. 24-C-24-000339</p>
-    <p class="cover-tagline">A Systemic Failure of Homeowner Protection — Key Filings, Motions &amp; Procedural Developments</p>
+    <h1>Holmes v. Northrop Realty et al.</h1>
+    <p>Interactive Investigative Timeline — 33 Documented Events</p>
+    <p>Civil Case No. C-24-CV-25-008195 | Admin Appeal No. 24-C-24-000339</p>
 </header>
 
-<div class="top-bar">
-    <div class="top-main">
-        <div class="btn-bar">
-            <a href="#" class="btn-primary">Download Timeline as PDF</a>
+<div class="container">
+    <aside class="sidebar">
+        <div class="sidebar-title">Key Documents</div>
+        <ul>
+            <li><a href="#">Civil Complaint (PDF)</a></li>
+            <li><a href="#">Exhibit FF — Contradiction Map</a></li>
+            <li><a href="#">MREC Final Order</a></li>
+            <li><a href="#">Bankruptcy Consent Order</a></li>
+            <li><a href="#">Press Release</a></li>
+        </ul>
+    </aside>
+
+    <div class="timeline">
+        <!-- EVENT 01 -->
+        <div class="event critical">
+            <div class="bubble bubble-critical">
+                <!-- Critical icon (alert) -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2L2 20h20L12 2zm0 6l.01 6H12zm0 8a1.25 1.25 0 110 2.5A1.25 1.25 0 0112 16z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Feb – Aug 2022 · ADMINISTRATIVE · CRITICAL</div>
+                <h3>Register Lists Home & Changes Locks During Bankruptcy Stay</h3>
+                <p>Daniel Register of Northrop Realty lists Plaintiff’s home for sale in February 2022. During an active federal bankruptcy stay under 11 U.S.C. §362, Register changes the locks on Plaintiff’s property at 2831 E. Northern Parkway, Baltimore, MD — without her knowledge or consent. A sign falsely stating the property was “bank/corporate owned and not for rent” is posted in the window.</p>
+            </div>
         </div>
 
-        <table class="stat-table">
-            <tr>
-                <td>
-                    <span class="stat-label">DEFENDANTS</span>
-                    <span class="stat-value">7</span>
-                </td>
-                <td class="stat-cell-alt">
-                    <span class="stat-label">TOTAL DAMAGES SOUGHT</span>
-                    <span class="stat-value">$500 Million</span>
-                </td>
+        <!-- EVENT 02 -->
+        <div class="event critical">
+            <div class="bubble bubble-critical">
+                <!-- Critical icon (stop) -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M7 3h10l4 4v10l-4 4H7l-4-4V7z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Aug 25, 2022 · ADMINISTRATIVE · CRITICAL</div>
+                <h3>Foreclosure Sale Proceeds Despite Active Bankruptcy Stay</h3>
+                <p>An attempted foreclosure sale is scheduled despite the active bankruptcy automatic stay. McCalla Raymer Leibert Pierce LLP (foreclosure counsel for Shellpoint Mortgage Servicing) proceeds to seek ratification, directly breaching the Bankruptcy Court’s Consent Order.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 03 -->
+        <div class="event">
+            <div class="bubble">
+                <!-- Utility / house icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 3l9 8h-3v9h-5v-6H11v6H6v-9H3z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Jul 9–10, 2023 · ADMINISTRATIVE</div>
+                <h3>DR Enterprises LLC Activates Utilities for Unauthorized Occupants</h3>
+                <p>Register’s personal LLC, DR Enterprises LLC, turns on electricity at Plaintiff’s property for unauthorized occupants. BGE utility records addressed to “DR Enterprises, LLC” become key evidence. SDAT records confirm the entity.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 04 -->
+        <div class="event critical">
+            <div class="bubble bubble-critical">
+                <!-- Filing icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M6 2h9l5 5v15H6zM9 4v5h7V7h-2V4z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Jul 17, 2023 · ADMINISTRATIVE · CRITICAL</div>
+                <h3>MREC Complaint & $250,000 Guaranty Fund Claim Filed</h3>
+                <p>Plaintiff files a formal complaint with the Maryland Real Estate Commission (MREC) against Register and Northrop Realty, alleging unauthorized leasing and management during an active bankruptcy stay. A $250,000 Guaranty Fund claim is filed simultaneously with 14 pages of evidence.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 05 -->
+        <div class="event">
+            <div class="bubble">
+                <!-- Document icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M6 2h9l5 5v15H6zM14 3.5V9h5.5z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Late 2023 · ADMINISTRATIVE</div>
+                <h3>Register’s 88-Page MREC Response — Critical Admission</h3>
+                <p>Register files an 88-page response. In a pivotal sworn admission, he states that he and Northrop Realty were “assigned to manage the Property by Shellpoint Mortgage Servicing.” He also submits Plaintiff’s personal lease agreement from a different address and rental payment history — documents he never explains.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 06 -->
+        <div class="event critical">
+            <div class="bubble bubble-critical">
+                <!-- Gavel / order icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M5 21h14v2H5zM3.7 14.3l4.6 4.6 2.1-2.1-4.6-4.6zm5.3-9.6l-2.1 2.1 4.6 4.6 2.1-2.1zm3.5 6.4l2.8 2.8 2.1-2.1-2.8-2.8z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Dec 21, 2023 · ADMINISTRATIVE · CRITICAL</div>
+                <h3>MREC Final Order — Complaint and Guaranty Fund Claim Dismissed</h3>
+                <p>MREC Interim Executive Director Raquel Meyers signs the Final Order dismissing both the disciplinary complaint and the Guaranty Fund claim without a contested case hearing. The dismissal letter is cc’d to Nick D’Ambrosia, Register’s supervising broker at Northrop Realty.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 07 -->
+        <div class="event critical">
+            <div class="bubble bubble-critical">
+                <!-- Court / appeal icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M3 21h18v-2H3zm2-4h2v-7H5zm4 0h2V5H9zm4 0h2v-5h-2zm4 0h2v-9h-2zM4 9l8-6 8 6H4z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Jan 18, 2024 · ADMINISTRATIVE · CRITICAL</div>
+                <h3>Petition for Judicial Review Filed</h3>
+                <p>Plaintiff files a Petition for Judicial Review challenging MREC’s dismissal. Case No. 24-C-24-000339 is assigned to Judge Middleton. The AG’s Office appears for MREC; Casey appears for Register.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 08 -->
+        <div class="event">
+            <div class="bubble">
+                <!-- Court building icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M3 10l9-7 9 7v2H3zm2 3h2v7H5zm4 0h2v7H9zm4 0h2v7h-2zm4 0h2v7h-2zM3 22h18v-2H3z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Jan 2025 · CIVIL</div>
+                <h3>Civil Complaint Drafted — Holmes v. Northrop Realty et al.</h3>
+                <p>Plaintiff drafts a comprehensive civil complaint naming seven defendants, including Register, Northrop Realty, Long & Foster, HomeServices of America, MAR, MREC, and McCalla Raymer LLP. Claims include fraud, negligence, civil conspiracy, and systemic regulatory failure.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 09 -->
+        <div class="event">
+            <div class="bubble">
+                <!-- Filing icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M6 2h9l5 5v15H6zM9 4v5h7V7h-2V4z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Jan 31, 2025 · CIVIL</div>
+                <h3>Civil Complaint Filed in Baltimore City Circuit Court</h3>
+                <p>Plaintiff files the civil complaint in Baltimore City Circuit Court. The case is docketed as C-24-CV-25-008195 and assigned to Judge Carrión. The complaint incorporates the MREC record and alleges coordinated failures across regulators and industry actors.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 10 -->
+        <div class="event">
+            <div class="bubble">
+                <!-- Service / mail icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M4 4h16v12H4zM2 8l10 6 10-6v10H2z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Feb 2, 2025 · CIVIL</div>
+                <h3>Service on MAR and Long & Foster</h3>
+                <p>Maryland Association of REALTORS and Long & Foster are served with the civil complaint. Their 30‑day answer deadlines are triggered under Maryland Rules.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 11 -->
+        <div class="event">
+            <div class="bubble">
+                <!-- Service / mail icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M4 4h16v12H4zM2 8l10 6 10-6v10H2z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Mar 11, 2025 · CIVIL</div>
+                <h3>Service on HomeServices of America</h3>
+                <p>HomeServices of America is served. A 60‑day answer period is later granted, extending HSoA’s deadline to respond.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 12 -->
+        <div class="event">
+            <div class="bubble">
+                <!-- Service / person icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2a4 4 0 110 8 4 4 0 010-8zm0 9c-4 0-7 2-7 5v3h14v-3c0-3-3-5-7-5z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Mar 26, 2025 · CIVIL</div>
+                <h3>Service on Northrop Realty / The Creig Northrop Team</h3>
+                <p>Northrop Realty and The Creig Northrop Team, P.C. are served with the civil complaint. Their 30‑day answer deadline is set for April 25, 2025.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 13 -->
+        <div class="event">
+            <div class="bubble">
+                <!-- Service / briefcase icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M9 2h6v3h5v6H4V5h5zm2 1v2h2V3zM4 12h16v8H4z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Apr 1, 2025 · CIVIL</div>
+                <h3>Service Attempts on McCalla Raymer LLP and Register</h3>
+                <p>Initial service attempts are made on McCalla Raymer LLP and Daniel Register. Register is believed to be residing in Puerto Rico; Plaintiff later moves for alternative service.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 14 -->
+        <div class="event">
+            <div class="bubble">
+                <!-- Motion icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M5 4h14v2H5zm0 4h10v2H5zm0 4h14v2H5zm0 4h10v2H5z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Apr 3, 2025 · CIVIL</div>
+                <h3>MAR Files Motion to Dismiss</h3>
+                <p>MAR files a Motion to Dismiss, arguing lack of duty and immunity. Plaintiff later opposes, pointing to MAR’s own ethics enforcement framework and grievance procedures.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 15 -->
+        <div class="event">
+            <div class="bubble">
+                <!-- Motion icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M5 4h14v2H5zm0 4h10v2H5zm0 4h14v2H5zm0 4h10v2H5z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Apr 10, 2025 · CIVIL</div>
+                <h3>Long & Foster Answer Deadline Expires — No Answer Filed</h3>
+                <p>Long & Foster’s 30‑day answer deadline expires with no answer, motion, or extension filed. Basis for an Order of Default is established.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 16 -->
+        <div class="event critical">
+            <div class="bubble bubble-critical">
+                <!-- Clock / deadline icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2a10 10 0 1010 10A10.01 10.01 0 0012 2zm1 5h-2v6l5 3 .9-1.5-3.9-2.3z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Apr 15, 2025 · CIVIL · CRITICAL</div>
+                <h3>MAR Motion to Dismiss Denied</h3>
+                <p>Judge Carrión denies MAR’s Motion to Dismiss, finding that Plaintiff has stated viable claims and that MAR’s duties and policies warrant factual development through discovery.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 17 -->
+        <div class="event">
+            <div class="bubble">
+                <!-- Discovery / file icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M4 4h10l6 6v10H4zM13 5v5h5z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Apr 20, 2025 · CIVIL</div>
+                <h3>Initial Discovery Served on MAR</h3>
+                <p>Plaintiff serves Interrogatories, Requests for Production, and Requests for Admission on MAR, targeting knowledge of complaints, ethics enforcement, and oversight of member conduct.</p>
+            </div>
+        </div>
+        <!-- EVENT 18 -->
+        <div class="event">
+            <div class="bubble">
+                <!-- Service icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M4 4h16v12H4zM2 8l10 6 10-6v10H2z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Mar 26, 2026 · CIVIL</div>
+                <h3>Northrop Realty / CNT Served</h3>
+                <p>Northrop Realty and The Creig Northrop Team, P.C. are served with the civil complaint. Casey later falsely claims in an April 3 email that “CNT has not been served” — contradicted by Plaintiff’s proof of service.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 19 -->
+        <div class="event critical">
+            <div class="bubble bubble-critical">
+                <!-- Critical stop icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M7 3h10l4 4v10l-4 4H7l-4-4V7z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Apr 3, 2026 · CIVIL · CRITICAL</div>
+                <h3>Casey Files Untimely L&F Motion to Dismiss</h3>
+                <p>Attorney Timothy Casey files a Motion to Dismiss on behalf of Long & Foster — 30 days after L&F’s answer deadline expired. Plaintiff files her Opposition within one hour. Casey’s filing for Northrop/CNT is timely because it falls on their 30‑day deadline.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 20 -->
+        <div class="event">
+            <div class="bubble">
+                <!-- Deadline icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2a10 10 0 1010 10A10.01 10.01 0 0012 2zm1 5h-2v6l5 3 .9-1.5-3.9-2.3z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Apr 10, 2026 · CIVIL</div>
+                <h3>HSoA Answer Deadline Expires</h3>
+                <p>HomeServices of America’s 30‑day answer deadline expires with no answer, motion, or extension filed. Basis for an Order of Default is established.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 21 -->
+        <div class="event">
+            <div class="bubble">
+                <!-- Document icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M6 2h9l5 5v15H6zM14 3.5V9h5.5z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Apr 17, 2026 · CIVIL</div>
+                <h3>MAR Discovery Responses Filed — 7 Contradictions</h3>
+                <p>MAR files sworn discovery responses containing seven documented contradictions, including denials of employee knowledge while admitting a Grievance Committee exists. MAR produces only one page of documents — a publicly available docket printout.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 22 -->
+        <div class="event">
+            <div class="bubble">
+                <!-- Person / service icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2a4 4 0 110 8 4 4 0 010-8zm0 9c-4 0-7 2-7 5v3h14v-3c0-3-3-5-7-5z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Apr 17, 2026 · CIVIL</div>
+                <h3>Casey Opposes Alternative Service for Register</h3>
+                <p>Casey files an Opposition to Plaintiff’s Motion for Alternative Service on behalf of Register, confirming he is now counsel of record. Register’s affidavit reveals he has been in Puerto Rico since July 10, 2025.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 23 -->
+        <div class="event">
+            <div class="bubble">
+                <!-- Discovery icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M4 4h10l6 6v10H4zM13 5v5h5z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Apr 18, 2026 · CIVIL</div>
+                <h3>Northrop/CNT Discovery Served</h3>
+                <p>Plaintiff serves initial and supplemental discovery on Northrop/CNT. A Notice of Discovery is filed the same day. Northrop’s response deadline is May 18, 2026.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 24 -->
+        <div class="event critical">
+            <div class="bubble bubble-critical">
+                <!-- Gavel icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M5 21h14v2H5zM3.7 14.3l4.6 4.6 2.1-2.1-4.6-4.6zm5.3-9.6l-2.1 2.1 4.6 4.6 2.1-2.1zm3.5 6.4l2.8 2.8 2.1-2.1-2.8-2.8z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Apr 23, 2026 · CIVIL · CRITICAL</div>
+                <h3>Order of Default Entered Against Long & Foster</h3>
+                <p>Judge Catherine Chen enters an Order of Default against Long & Foster for failure to timely answer. L&F’s untimely April 3 MTD does not cure the default under Maryland law.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 25 -->
+        <div class="event">
+            <div class="bubble">
+                <!-- Affidavit / document icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M6 2h9l5 5v15H6zM9 4v5h7V7h-2V4z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Apr 25–27, 2026 · CIVIL</div>
+                <h3>Motion to Vacate Default — Affidavits Filed</h3>
+                <p>Three affidavits are filed supporting L&F’s Motion to Vacate Default: Register (Apr 25), D’Ambrosia (Apr 26), and Casey (Apr 27). D’Ambrosia claims L&F has “meritorious defenses” despite personal knowledge of the MREC complaint.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 26 -->
+        <div class="event">
+            <div class="bubble">
+                <!-- Document icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M6 2h9l5 5v15H6zM14 3.5V9h5.5z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Apr 28, 2026 · CIVIL</div>
+                <h3>RFA Set 2 Served on Northrop and MAR</h3>
+                <p>Plaintiff serves Request for Admissions Set 2 on Northrop/CNT and MAR, targeting liability admissions, agency relationships, and knowledge of bankruptcy stay violations.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 27 -->
+        <div class="event">
+            <div class="bubble">
+                <!-- Filing icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M5 4h14v2H5zm0 4h10v2H5zm0 4h14v2H5zm0 4h10v2H5z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">May 6, 2026 · CIVIL</div>
+                <h3>Plaintiff Files Reply to MAR’s Opposition</h3>
+                <p>Plaintiff files a six‑section reply dismantling MAR’s opposition, citing four privilege assertions without a privilege log and contradictions in MAR’s own exhibits.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 28 -->
+        <div class="event">
+            <div class="bubble">
+                <!-- Document / land record icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M4 4h16v16H4zM8 2h8v2H8z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">May 7, 2026 · CIVIL</div>
+                <h3>Notice of Lis Pendens Filed</h3>
+                <p>Plaintiff files a Notice of Lis Pendens in the Baltimore City Land Records and serves notice on the mortgage servicer, creating a public cloud on title.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 29 -->
+        <div class="event critical">
+            <div class="bubble bubble-critical">
+                <!-- Deadline icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2a10 10 0 1010 10A10.01 10.01 0 0012 2zm1 5h-2v6l5 3 .9-1.5-3.9-2.3z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">May 10, 2026 · CIVIL · CRITICAL</div>
+                <h3>HSoA 60‑Day Answer Deadline Expires</h3>
+                <p>HSoA’s extended 60‑day answer deadline expires with no answer filed. Plaintiff files for an Order of Default. Casey has filed nothing on HSoA’s behalf since service on March 11.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 30 -->
+        <div class="event critical">
+            <div class="bubble bubble-critical">
+                <!-- License / ID icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M3 5h18v14H3zM6 8h5v2H6zm0 4h3v2H6z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">May 13, 2026 · CIVIL · CRITICAL</div>
+                <h3>Register’s Maryland Real Estate License Expires</h3>
+                <p>Register’s Maryland real estate license expires two days before the May 15 chambers hearing. He has been residing in Puerto Rico since July 10, 2025, raising supervision and licensing issues.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 31 -->
+        <div class="event critical">
+            <div class="bubble bubble-critical">
+                <!-- Court icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M3 10l9-7 9 7v2H3zm2 3h2v7H5zm4 0h2v7H9zm4 0h2v7h-2zm4 0h2v7h-2zM3 22h18v-2H3z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">May 15, 2026 · CIVIL · CRITICAL</div>
+                <h3>Chambers Hearing Before Judge Carrión</h3>
+                <p>Chambers hearing held before Judge Carrión. All pending motions are before the court, including: L&F Motion to Vacate Default, HSoA default status, MAR MTDs (both denied), Motion to Compel, and alternative service motions.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 32 -->
+        <div class="event">
+            <div class="bubble">
+                <!-- Deadline icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2a10 10 0 1010 10A10.01 10.01 0 0012 2zm1 5h-2v6l5 3 .9-1.5-3.9-2.3z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">May 18, 2026 · CIVIL</div>
+                <h3>Northrop/CNT Discovery Response Deadline</h3>
+                <p>Northrop/CNT’s deadline to respond to all outstanding discovery is May 18, 2026. Non‑compliance supports a Motion to Compel and sanctions.</p>
+            </div>
+        </div>
+
+        <!-- EVENT 33 -->
+        <div class="event">
+            <div class="bubble">
+                <!-- Filing icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M5 4h14v2H5zm0 4h10v2H5zm0 4h14v2H5zm0 4h10v2H5z"/>
+                </svg>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Aug 2026 · CIVIL</div>
+                <h3>Amended Complaint Deadline</h3>
+                <p>The Scheduling Order sets the deadline for Plaintiff to file the Amended Complaint, adding a fully developed punitive damages section, systemic‑failure timeline exhibit, and refined damages framework.</p>
+            </div>
+        </div>
+
+        <!-- DEFENDANT STATUS SUMMARY -->
+        <h2 style="margin-top:40px; color:var(--gold);">Defendant Status Summary</h2>
+
+        <table style="width:100%; border-collapse:collapse; margin-top:12px;">
+            <tr style="background:#f5f5f5;">
+                <th style="padding:8px; border:1px solid #ddd;">Defendant</th>
+                <th style="padding:8px; border:1px solid #ddd;">Served</th>
+                <th style="padding:8px; border:1px solid #ddd;">Counsel</th>
+                <th style="padding:8px; border:1px solid #ddd;">Status</th>
             </tr>
             <tr>
-                <td class="stat-cell-alt">
-                    <span class="stat-label">ORDERS OF DEFAULT</span>
-                    <span class="stat-value">1 <span style="font-size:9pt; font-weight:normal; color:#555;">(L&amp;F entered)</span></span>
-                </td>
-                <td>
-                    <span class="stat-label">CASE STATUS</span>
-                    <span class="stat-value" style="font-size:12pt;">Active — Both Tracks Open</span>
-                </td>
+                <td style="padding:8px; border:1px solid #ddd;">Daniel Register</td>
+                <td style="padding:8px; border:1px solid #ddd;">Pending (Alt. Service)</td>
+                <td style="padding:8px; border:1px solid #ddd;">Timothy Casey</td>
+                <td style="padding:8px; border:1px solid #ddd;">Alt. Service Pending; Puerto Rico</td>
+            </tr>
+            <tr>
+                <td style="padding:8px; border:1px solid #ddd;">Northrop Realty / CNT</td>
+                <td style="padding:8px; border:1px solid #ddd;">Mar 26, 2026</td>
+                <td style="padding:8px; border:1px solid #ddd;">Timothy Casey</td>
+                <td style="padding:8px; border:1px solid #ddd;">MTD Filed; Discovery Deadline May 18</td>
+            </tr>
+            <tr>
+                <td style="padding:8px; border:1px solid #ddd;">Long & Foster</td>
+                <td style="padding:8px; border:1px solid #ddd;">Feb 2, 2026</td>
+                <td style="padding:8px; border:1px solid #ddd;">Timothy Casey</td>
+                <td style="padding:8px; border:1px solid #ddd;">Order of Default Entered</td>
+            </tr>
+            <tr>
+                <td style="padding:8px; border:1px solid #ddd;">HomeServices of America</td>
+                <td style="padding:8px; border:1px solid #ddd;">Mar 11, 2026</td>
+                <td style="padding:8px; border:1px solid #ddd;">Timothy Casey</td>
+                <td style="padding:8px; border:1px solid #ddd;">Default Pending</td>
+            </tr>
+            <tr>
+                <td style="padding:8px; border:1px solid #ddd;">Maryland Association of REALTORS</td>
+                <td style="padding:8px; border:1px solid #ddd;">Feb 2, 2026</td>
+                <td style="padding:8px; border:1px solid #ddd;">Jerry Magrogan</td>
+                <td style="padding:8px; border:1px solid #ddd;">Both MTDs Denied; Motion to Compel Pending</td>
+            </tr>
+            <tr>
+                <td style="padding:8px; border:1px solid #ddd;">Maryland Real Estate Commission</td>
+                <td style="padding
+            <tr>
+                <td style="padding:8px; border:1px solid #ddd;">Maryland Real Estate Commission</td>
+                <td style="padding:8px; border:1px solid #ddd;">Pending</td>
+                <td style="padding:8px; border:1px solid #ddd;">AG’s Office</td>
+                <td style="padding:8px; border:1px solid #ddd;">Active — Admin Appeal Open</td>
+            </tr>
+            <tr>
+                <td style="padding:8px; border:1px solid #ddd;">McCalla Raymer LLP</td>
+                <td style="padding:8px; border:1px solid #ddd;">Pending (Alt. Service)</td>
+                <td style="padding:8px; border:1px solid #ddd;">TBD</td>
+                <td style="padding:8px; border:1px solid #ddd;">Alt. Service Pending</td>
             </tr>
         </table>
-    </div>
 
-    <aside class="top-side">
-        <div class="sidebar">
-            <div class="sidebar-title">Key Documents</div>
-            <ul>
-                <li><a href="#">Civil Complaint (PDF)</a></li>
-                <li><a href="#">Exhibit FF — Cross-Defendant Contradiction Map</a></li>
-                <li><a href="#">MREC Final Order (Dec. 21, 2023)</a></li>
-                <li><a href="#">Bankruptcy Consent Order</a></li>
-                <li><a href="#">Press Release — Holmes v. Northrop</a></li>
-            </ul>
-        </div>
-    </aside>
-</div>
+    </div> <!-- end timeline -->
+</div> <!-- end container -->
 
-<hr class="section-rule">
-
-<p class="timeline-header">&#9201; CHRONOLOGICAL EVENT LOG — 33 DOCUMENTED EVENTS (August 2022 – August 2026)</p>
-
-<table class="legend-table">
-    <tr><td class="legend-label"><span class="legend-admin">&#127963; ADMINISTRATIVE TRACK</span> — MREC complaint, dismissal, and judicial review</td></tr>
-    <tr><td class="legend-label"><span class="legend-civil">&#9878; CIVIL CASE TRACK</span> — Baltimore City Circuit Court filings, motions, defaults</td></tr>
-    <tr><td class="legend-label"><span class="legend-critical">&#128308; CRITICAL EVENT</span> — Landmark procedural or factual development</td></tr>
-</table>
-
-<hr class="section-rule">
-<!-- EVENT 01 -->
-<div class="event-block">
-    <p class="event-number">EVENT 01 of 33</p>
-    <h2 class="track-critical">&#128308; February – August 2022 | ADMINISTRATIVE | CRITICAL EVENT</h2>
-    <h3>Register Listed Home for Sale and Changes Locks on Bankruptcy-Protected Property</h3>
-    <p>Daniel Register of Northrop Realty lists Plaintiff’s home for sale in February 2022. During an active federal bankruptcy stay under 11 U.S.C. §362, Register changes the locks on Plaintiff’s property at 2831 E. Northern Parkway, Baltimore, MD — without her knowledge or consent. A sign falsely stating the property was “bank/corporate owned and not for rent” is posted in the window.</p>
-    <p class="status-line">Status: Critical Event</p>
-</div>
-<hr class="event-rule">
-
-<!-- EVENT 02 -->
-<div class="event-block">
-    <p class="event-number">EVENT 02 of 33</p>
-    <h2 class="track-critical">&#128308; August 25, 2022 | ADMINISTRATIVE | CRITICAL EVENT</h2>
-    <h3>Foreclosure Sale — Active Bankruptcy Stay in Effect</h3>
-    <p>An attempted foreclosure sale is scheduled despite the active bankruptcy automatic stay. McCalla Raymer Leibert Pierce LLP (foreclosure counsel for Shellpoint Mortgage Servicing) proceeds to seek ratification, directly breaching the Bankruptcy Court’s Consent Order.</p>
-    <p class="status-line">Status: Critical Event</p>
-</div>
-<hr class="event-rule">
-
-<!-- EVENT 03 -->
-<div class="event-block">
-    <p class="event-number">EVENT 03 of 33</p>
-    <h2 class="track-admin">&#127963; July 9–10, 2023 | ADMINISTRATIVE</h2>
-    <h3>DR Enterprises LLC Activates Utilities for Unauthorized Occupants</h3>
-    <p>Register’s personal LLC, DR Enterprises LLC, turns on electricity at Plaintiff’s property for unauthorized occupants. BGE utility records addressed to “DR Enterprises, LLC” become key evidence. SDAT records confirm the entity.</p>
-    <p class="status-line">Status: Documented</p>
-</div>
-<hr class="event-rule">
-
-<!-- EVENT 04 -->
-<div class="event-block">
-    <p class="event-number">EVENT 04 of 33</p>
-    <h2 class="track-critical">&#128308; July 17, 2023 | ADMINISTRATIVE | CRITICAL EVENT</h2>
-    <h3>MREC Complaint &amp; $250,000 Guaranty Fund Claim Filed</h3>
-    <p>Plaintiff files a formal complaint with the Maryland Real Estate Commission (MREC) against Register and Northrop Realty, alleging unauthorized leasing and management during an active bankruptcy stay. A $250,000 Guaranty Fund claim is filed simultaneously with 14 pages of evidence.</p>
-    <p class="status-line">Status: Filed</p>
-</div>
-<hr class="event-rule">
-
-<!-- EVENT 05 -->
-<div class="event-block">
-    <p class="event-number">EVENT 05 of 33</p>
-    <h2 class="track-admin">Late 2023 | ADMINISTRATIVE</h2>
-    <h3>Register’s 88-Page MREC Response — Critical Admission</h3>
-    <p>Register files an 88-page response. In a pivotal sworn admission, he states that he and Northrop Realty were “assigned to manage the Property by Shellpoint Mortgage Servicing.” He also submits Plaintiff’s personal lease agreement from a different address and rental payment history — documents he never explains.</p>
-    <p class="status-line">Status: Filed</p>
-</div>
-<hr class="event-rule">
-
-<!-- EVENT 06 -->
-<div class="event-block">
-    <p class="event-number">EVENT 06 of 33</p>
-    <h2 class="track-critical">&#128308; December 21, 2023 | ADMINISTRATIVE | CRITICAL EVENT</h2>
-    <h3>MREC Final Order — Complaint and Guaranty Fund Claim Dismissed</h3>
-    <p>MREC Interim Executive Director Raquel Meyers signs the Final Order dismissing both the disciplinary complaint and the Guaranty Fund claim without a contested case hearing. The dismissal letter is cc’d to Nick D’Ambrosia, Register’s supervising broker at Northrop Realty.</p>
-    <p class="status-line">Status: Order Issued</p>
-</div>
-<hr class="event-rule">
-
-<!-- EVENT 07 -->
-<div class="event-block">
-    <p class="event-number">EVENT 07 of 33</p>
-    <h2 class="track-critical">&#128308; January 18, 2024 | ADMINISTRATIVE | CRITICAL EVENT</h2>
-    <h3>Petition for Judicial Review Filed</h3>
-    <p>Plaintiff files a Petition for Judicial Review challenging MREC’s dismissal. Case No. 24-C-24-000339 is assigned to Judge Middleton. The AG’s Office appears for MREC; Casey appears for Register.</
-<!-- EVENT 18 -->
-<div class="event-block">
-    <p class="event-number">EVENT 18 of 33</p>
-    <h2 class="track-civil">March 26, 2026 | CIVIL</h2>
-    <h3>Northrop Realty / The Creig Northrop Team Served</h3>
-    <p>Northrop Realty and The Creig Northrop Team, P.C. are served with the civil complaint. Casey later falsely claims in an April 3 email that “CNT has not been served” — contradicted by Plaintiff’s proof of service.</p>
-    <p class="status-line">Status: Served</p>
-</div>
-<hr class="event-rule">
-
-<!-- EVENT 19 -->
-<div class="event-block">
-    <p class="event-number">EVENT 19 of 33</p>
-    <h2 class="track-critical">&#128308; April 3, 2026 | CIVIL | CRITICAL EVENT</h2>
-    <h3>Casey Files Untimely L&F Motion to Dismiss — Plaintiff Opposes Within One Hour</h3>
-    <p>Attorney Timothy Casey files a Motion to Dismiss on behalf of Long & Foster — 30 days after L&F’s answer deadline expired. Plaintiff files her Opposition within one hour (Motion at 11:07 AM; Opposition at 12:07 PM). Casey’s filing for Northrop/CNT is timely because it falls on their 30‑day deadline.</p>
-    <p class="status-line">Status: Filed — Untimely (L&F) / Timely (Northrop)</p>
-</div>
-<hr class="event-rule">
-
-<!-- EVENT 20 -->
-<div class="event-block">
-    <p class="event-number">EVENT 20 of 33</p>
-    <h2 class="track-civil">April 10, 2026 | CIVIL</h2>
-    <h3>HomeServices of America Answer Deadline Expires — No Answer Filed</h3>
-    <p>HSoA’s 30‑day answer deadline expires with no answer, motion, or extension filed. Basis for an Order of Default is established. Plaintiff initiates default proceedings.</p>
-    <p class="status-line">Status: Deadline Expired</p>
-</div>
-<hr class="event-rule">
-
-<!-- EVENT 21 -->
-<div class="event-block">
-    <p class="event-number">EVENT 21 of 33</p>
-    <h2 class="track-civil">April 17, 2026 | CIVIL</h2>
-    <h3>MAR Discovery Responses Filed — 7 Documented Contradictions</h3>
-    <p>MAR files sworn discovery responses containing seven documented contradictions, including denials of employee knowledge while admitting a Grievance Committee exists, and denying oversight while admitting ethics enforcement policies. MAR produces only one page of documents — a publicly available docket printout.</p>
-    <p class="status-line">Status: Filed — Deficient</p>
-</div>
-<hr class="event-rule">
-
-<!-- EVENT 22 -->
-<div class="event-block">
-    <p class="event-number">EVENT 22 of 33</p>
-    <h2 class="track-civil">April 17, 2026 | CIVIL</h2>
-    <h3>Casey Files Opposition to Alternate Service on Behalf of Register</h3>
-    <p>Casey files an Opposition to Plaintiff’s Motion for Alternative Service on behalf of Register, confirming he is now counsel of record for Register. Register’s affidavit reveals he has been in Puerto Rico since July 10, 2025. Casey now represents five defendants.</p>
-    <p class="status-line">Status: Filed</p>
-</div>
-<hr class="event-rule">
-
-<!-- EVENT 23 -->
-<div class="event-block">
-    <p class="event-number">EVENT 23 of 33</p>
-    <h2 class="track-civil">April 18, 2026 | CIVIL</h2>
-    <h3>Northrop/CNT Discovery Served; Notice of Discovery Filed</h3>
-    <p>Plaintiff serves initial and supplemental discovery on Northrop/CNT (Interrogatories, RFPs, RFAs). A Notice of Discovery is filed the same day. Northrop’s response deadline is May 18, 2026.</p>
-    <p class="status-line">Status: Served</p>
-<!-- EVENT 24 -->
-<div class="event-block">
-    <p class="event-number">EVENT 24 of 33</p>
-    <h2 class="track-critical">&#128308; April 23, 2026 | CIVIL | CRITICAL EVENT</h2>
-    <h3>Order of Default Entered Against Long & Foster</h3>
-    <p>Judge Catherine Chen enters an Order of Default against Long & Foster for failure to timely answer. L&F’s untimely April 3 MTD does not cure the default under Maryland law.</p>
-    <p class="status-line">Status: Default Entered</p>
-</div>
-<hr class="event-rule">
-
-<!-- EVENT 25 -->
-<div class="event-block">
-    <p class="event-number">EVENT 25 of 33</p>
-    <h2 class="track-civil">April 25–27, 2026 | CIVIL</h2>
-    <h3>Motion to Vacate L&F Default — D’Ambrosia, Register & Casey Affidavits Filed</h3>
-    <p>Three affidavits are filed supporting L&F’s Motion to Vacate Default: (1) Register (Apr 25); (2) Nick D’Ambrosia (Apr 26) — the same D’Ambrosia cc’d on the MREC dismissal letter as Register’s supervising broker at Northrop; (3) Casey (Apr 27). D’Ambrosia claims L&F has “meritorious defenses” despite personal knowledge of the MREC complaint.</p>
-    <p class="status-line">Status: Filed — Pending</p>
-</div>
-<hr class="event-rule">
-
-<!-- EVENT 26 -->
-<div class="event-block">
-    <p class="event-number">EVENT 26 of 33</p>
-    <h2 class="track-civil">April 28, 2026 | CIVIL</h2>
-    <h3>RFA Set 2 Served on Northrop and MAR</h3>
-    <p>Plaintiff serves Request for Admissions Set 2 on Northrop/CNT and MAR, targeting liability admissions, agency relationships, and knowledge of bankruptcy stay violations.</p>
-    <p class="status-line">Status: Served</p>
-</div>
-<hr class="event-rule">
-
-<!-- EVENT 27 -->
-<div class="event-block">
-    <p class="event-number">EVENT 27 of 33</p>
-    <h2 class="track-civil">May 6, 2026 | CIVIL</h2>
-    <h3>Plaintiff Files Reply to MAR’s Opposition to Motion to Compel</h3>
-    <p>Plaintiff files a six‑section reply dismantling MAR’s opposition, citing four privilege assertions without a privilege log, MAR’s refusal to participate in a Rule 2‑401(c) conference, and contradictions in MAR’s own exhibits.</p>
-    <p class="status-line">Status: Filed</p>
-</div>
-<hr class="event-rule">
-
-<!-- EVENT 28 -->
-<div class="event-block">
-    <p class="event-number">EVENT 28 of 33</p>
-    <h2 class="track-civil">May 7, 2026 | CIVIL</h2>
-    <h3>Notice of Lis Pendens Filed in Baltimore City Land Records</h3>
-    <p>Plaintiff files a Notice of Lis Pendens in the Baltimore City Land Records and serves notice on the mortgage servicer, creating a public cloud on title.</p>
-    <p class="status-line">Status: Filed</p>
-</div>
-<hr class="event-rule">
-
-<!-- EVENT 29 -->
-<div class="event-block">
-    <p class="event-number">EVENT 29 of 33</p>
-    <h2 class="track-critical">&#128308; May 10, 2026 | CIVIL | CRITICAL EVENT</h2>
-    <h3>HomeServices of America 60‑Day Answer Deadline Expires</h3>
-    <p>HSoA’s extended 60‑day answer deadline expires with no answer filed. Plaintiff files for an Order of Default. Casey has filed nothing on HSoA’s behalf since service on March 11 — 60 days of silence.</p>
-    <p class="status-line">Status: Default Pending</p>
-</div>
-<hr class="event-rule">
-
-<!-- EVENT 30 -->
-<div class="event-block">
-    <p class="event-number">EVENT 30 of 33</p>
-    <h2 class="track-critical">&#128308; May 13, 2026 | CIVIL | CRITICAL EVENT</h2>
-    <h3>Daniel Register’s Maryland Real Estate License Expires</h3>
-    <p>Register’s Maryland real estate license expires two days before the May 15 chambers hearing. He has been residing in Puerto Rico since July 10, 2025, raising supervision and licensing issues.</p>
-    <p class="status-line">Status: License Expired</p>
-</div>
-<hr class="event-rule">
-
-<!-- EVENT 31 -->
-<div class="event-block">
-    <p class="event-number">EVENT 31 of 33</p>
-    <h2 class="track-critical">&#128308; May 15, 2026 | CIVIL | CRITICAL EVENT</h2>
-    <h3>Chambers Hearing Before Judge Carrión</h3>
-    <p>Chambers hearing held before Judge Carrión. All pending motions are before the court, including: L&F Motion to Vacate Default, HSoA default status, MAR MTDs (both denied), Motion to Compel, and alternative service motions.</p>
-    <p class="status-line">Status: Hearing Held</p>
-</div>
-<hr class="event-rule">
-
-<!-- EVENT 32 -->
-<div class="event-block">
-    <p class="event-number">EVENT 32 of 33</p>
-    <h2 class="track-civil">May 18, 2026 | CIVIL</h2>
-    <h3>Northrop/CNT Discovery Response Deadline</h3>
-    <p>Northrop/CNT’s deadline to respond to all outstanding discovery is May 18, 2026. Non‑compliance supports a Motion to Compel and sanctions.</p>
-    <p class="status-line">Status: Pending</p>
-</div>
-<hr class="event-rule">
-
-<!-- EVENT 33 -->
-<div class="event-block">
-    <p class="event-number">EVENT 33 of 33</p>
-    <h2 class="track-civil">August 2026 | CIVIL</h2>
-    <h3>Amended Complaint Deadline</h3>
-    <p>The Scheduling Order sets the deadline for Plaintiff to file the Amended Complaint, adding a fully developed punitive damages section, systemic‑failure timeline exhibit, and refined damages framework.</p>
-    <p class="status-line">Status: Upcoming</p>
-</div>
-<hr class="event-rule">
-
-<!-- DEFENDANT STATUS SUMMARY -->
-<table class="stat-table" style="margin-top:20px;">
-    <tr>
-        <td><strong>Defendant</strong></td>
-        <td><strong>Served</strong></td>
-        <td><strong>Counsel</strong></td>
-        <td><strong>Status</strong></td>
-    </tr>
-    <tr>
-        <td>Daniel Register</td>
-        <td>Pending (Alt. Service)</td>
-        <td>Timothy Casey</td>
-        <td>Alt. Service Pending; Puerto Rico</td>
-    </tr>
-    <tr>
-        <td>Northrop Realty / CNT</td>
-        <td>March 26, 2026</td>
-        <td>Timothy Casey</td>
-        <td>MTD Filed; Discovery Deadline May 18</td>
-    </tr>
-    <tr>
-        <td>Long & Foster</td>
-        <td>February 2, 2026</td>
-        <td>Timothy Casey</td>
-        <td>Order of Default Entered</td>
-    </tr>
-    <tr>
-        <td>HomeServices of America</td>
-        <td>March 11, 2026</td>
-        <td>Timothy Casey</td>
-        <td>Default Pending</td>
-    </tr>
-    <tr>
-        <td>Maryland Association of REALTORS</td>
-        <td>February 2, 2026</td>
-        <td>Jerry Magrogan</td>
-        <td>Both MTDs Denied; Motion to Compel Pending</td>
-    </tr>
-    <tr>
-        <td>Maryland Real Estate Commission</td>
-        <td>Pending</td>
-        <td>AG’s Office</td>
-        <td>Active — Admin Appeal Open</td>
-    </tr>
-    <tr>
-        <td>McCalla Raymer LLP</td>
-        <td>Pending (Alt. Service)</td>
-        <td>TBD</td>
-        <td>Alt. Service Pending</td>
-    </tr>
-</table>
-
-<footer>
-    <p class="footer-text">This timeline is provided for informational and press purposes and is based on filed pleadings, administrative records, and court dockets as of the dates indicated.</p>
-    <p class="footer-brand">Prepared by: LaToya Holmes | ProSeLitCoach.com | info@proselitcoach.com</p>
+<footer style="margin-top:40px; padding:20px; text-align:center; border-top:2px solid var(--gold);">
+    <p style="margin:4px 0; font-size:11pt;">
+        Interactive Timeline prepared by <strong>LaToya Holmes</strong> · ProSeLitCoach.com
+    </p>
+    <p style="margin:4px 0; font-size:10pt; color:#555;">
+        Based on filed pleadings, administrative records, and court dockets as of the dates indicated.
+    </p>
 </footer>
 
 </body>
